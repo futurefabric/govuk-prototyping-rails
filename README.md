@@ -11,10 +11,11 @@ It exists for the following reasons:
 * To allow us to easily publish prototypes for testing (using Heroku).
 
 
-Some caveats
+Some caveats:
 
 * The emphasis is on speed of prototype creation for designers rather than perfect code for developers.
 * It's about making quick, throw away layouts that would likely need to be rebuilt semantically for production.
 * It uses Rails so requires that locally to be used.
 * It hotlinks to the GOV.UK application.css and gov_uk_template.css in production.
-* It uses copies of the frontend toolkit and design patterns grids, which may need copying across again if they change significantly.
+* It uses copies of the [frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) and [design patterns grids](http://alphagov.github.io/design-patterns/example/grid.html), which may need copying across again if they change significantly.
+
