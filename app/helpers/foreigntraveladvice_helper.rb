@@ -1,0 +1,2 @@
+module ForeigntraveladviceHelper
+end

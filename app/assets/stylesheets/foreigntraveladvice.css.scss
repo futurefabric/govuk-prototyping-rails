@@ -1,0 +1,48 @@
+// Place all the styles related to the foreigntraveladvice controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.heading-48 {
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.ruled {
+	border-top:1px solid $grey-3;
+}
+
+img.map {
+	width:100%;
+	margin-top:20px;
+}
+
+nav li:before {
+	content: "-";
+	position: relative;
+	float: left;
+	width: 15px;
+	margin-left: -15px;
+}
+
+nav li {
+	@include core-16;
+}
+
+.title_intro {
+	p {
+		margin-bottom:10px;
+	}
+}
+
+.visitor_info {
+
+	padding-top:15px;
+
+	h2 {
+		@include bold-24;
+	}
+
+	p, li, a {
+		@include core-16;
+	}
+}

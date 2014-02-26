@@ -210,8 +210,6 @@ Example usage:
   font-weight: 400;
   text-transform: none;
   font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 30px;
 }
 @media (max-width: 640px) {
   /* line 1, /Users/gemmaleigh/Sites/govuk/design-patterns/assets/sass/govuk-helper/_typography-headings.scss */
@@ -223,8 +221,6 @@ Example usage:
 @media (min-width: 641px) {
   /* line 1, /Users/gemmaleigh/Sites/govuk/design-patterns/assets/sass/govuk-helper/_typography-headings.scss */
   .govuk .heading-48 {
-    margin-top: 30px;
-    margin-bottom: 60px;
   }
 }
 /* line 9, /Users/gemmaleigh/Sites/govuk/design-patterns/assets/sass/govuk-helper/_typography-headings.scss */
