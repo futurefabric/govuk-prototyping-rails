@@ -1,5 +1,8 @@
 GovukPrototypingRails::Application.routes.draw do
   
+  get "apply_carers_allowance/index"
+  get "apply-carers-allowance" => 'apply_carers_allowance#index'
+
   get "examples/index"
   get "examples" => 'examples#index'
   
@@ -7,7 +10,7 @@ GovukPrototypingRails::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'examples#index'
+  root 'apply_carers_allowance#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
