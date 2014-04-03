@@ -14,3 +14,51 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+  
+ //  $("input[name='first_or_renew']").change(function(){
+ //  	var input_id = $(this).attr('id');
+    
+ //    if(input_id == 'renew_passport') {
+ //    	$(".urgent_hint").show();
+ //    }else{
+ //    	$(".urgent_hint").hide();
+ //    }
+ // });
+
+	$("#continue").click(function() {
+		var adult_or_child = $("input:radio[name='adult_or_child']:checked", '#passports').val();
+		var first_or_renew = $("input:radio[name='first_or_renew']:checked", '#passports').val();
+
+		//window.location = "http://gov.uk" + value1 + ' - ' + value2
+
+		if(adult_or_child == 'adult') {
+			if(first_or_renew == 'first_passport') {
+				var url = 'https://gov.uk';
+	     			window.location = url;
+			}
+
+			if(first_or_renew == 'renew_passport') {
+				var url = 'apply-renew-passport';
+	     			window.location = url;
+			}
+		}
+
+		if(adult_or_child == 'child') {
+			if(first_or_renew == 'first_passport') {
+				var url = 'https://gov.uk';
+	     			window.location = url;
+			}
+
+			if(first_or_renew == 'renew_passport') {
+				var url = 'https://gov.uk';
+	     			window.location = url;
+			}
+		}
+
+	});
+
+});
+

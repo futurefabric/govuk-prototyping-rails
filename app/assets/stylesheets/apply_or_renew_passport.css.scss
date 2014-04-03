@@ -1,0 +1,66 @@
+// Place all the styles related to the apply-or-renew-passport controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+main {
+	min-height:800px;
+}
+
+h2 {
+	@include bold-24;
+	margin-bottom:20px;
+}
+
+.govuk { 
+	.heading-48 {
+		margin-top:38px;
+		margin-bottom:25px;
+	}
+
+	.passport-type {
+		margin-bottom:50px;
+	}
+
+	.form-checkbox {
+		margin-top:-20px;
+		margin-left:13px;
+	}
+
+	form {
+		margin-top:45px;
+	}
+
+	.form-group {
+
+	}
+
+	p.urgent_hint {
+		display:none;
+		margin-bottom:40px;
+	}
+}
+
+p {
+	max-width:590px;
+}
+
+ul.top-tasks {
+	margin-top:38px;
+}
+
+ul.top-tasks li a {
+	@include bold-16;
+	text-decoration:none;
+}
+
+.ruled {
+	//border-bottom:1px solid #BFC1C3;
+	//margin-bottom:45px;
+	margin-bottom:15px;
+}
+
+
+
+.button.medium{
+	font-weight:700;
+}

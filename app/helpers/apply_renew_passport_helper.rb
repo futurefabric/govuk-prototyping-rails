@@ -1,0 +1,2 @@
+module ApplyRenewPassportHelper
+end
