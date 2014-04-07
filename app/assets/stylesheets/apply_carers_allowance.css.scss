@@ -161,3 +161,18 @@ padding: 1em;
   border-left: 5px solid $border-colour;
   margin-bottom: 2em;
 }
+
+.you-will ul {
+list-style-type: circle;
+padding-left: 12px;
+list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-4180cb91fb35028365a59ddfcfd36e34.gif);
+}
+
+p.example {
+	@include core-16;
+	margin-bottom: 5px;
+}
+
+h3 {
+ @include bold-19;
+}
