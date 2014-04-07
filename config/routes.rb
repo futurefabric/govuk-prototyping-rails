@@ -11,6 +11,7 @@ GovukPrototypingRails::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'apply_carers_allowance#index'
+  match "carers_allowance_yes" => "apply_carers_allowance#carers_response_yes", via: [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -125,3 +125,35 @@ margin-right: 30px;
  	@include core-16;
  }
 }
+
+.complete header {
+max-width: 640px;
+border: 5px solid $red;
+margin: 0 2em;
+margin: 1em 0 2em;
+padding: 1em;
+}
+
+.hidden_thing {
+  display:none;
+  margin-top: 2em;
+  padding-top: 2em;
+  .title {
+  	@include bold-16;
+  }
+  p {
+  	margin-left: 20px;
+  }
+  h2 { 
+   margin-left: 20px;
+  }
+  .hidden-radio {
+  	margin-left: 20px;
+  }
+}
+
+.open-border {
+  overflow-y: auto;
+  border-left: 5px solid $border-colour;
+  margin-bottom: 2em;
+}
