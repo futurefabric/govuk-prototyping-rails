@@ -16,6 +16,34 @@ img.map {
 	margin-top:20px;
 }
 
+.link_to_world {
+	display:block;
+	width:100%;
+	margin-bottom:10px;
+	font-weight:700;
+	text-decoration:none;
+}
+.advice-status {
+	display:block;
+	margin-bottom:30px;
+}
+
+.more_details {
+	display:block;
+	margin-top:-15px;
+}
+
+.entry-and-exit {
+
+	padding-top:15px;
+	margin-top:35px;
+
+	h1 {
+		@include bold-24;
+	}
+}
+
+
 nav li:before {
 	content: "-";
 	position: relative;
@@ -45,4 +73,9 @@ nav li {
 	p, li, a {
 		@include core-16;
 	}
+}
+
+ul li {
+	list-style:disc;
+	margin-left:18px;
 }
