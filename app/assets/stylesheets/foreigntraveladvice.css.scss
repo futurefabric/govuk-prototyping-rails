@@ -2,9 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.advice-status {
+	padding-left:30px;
+	display:block;
+	margin-bottom:30px;
+}
+
+.no-travel {
+	background-image: image-url("no-travel-icon.png");
+	background-repeat: no-repeat;
+	background-position: 0 5px;
+}
+
+.essential-travel-only {
+	background-image: image-url("essential-travel-only-icon.png");
+	background-repeat: no-repeat;
+	background-position: 0 5px;
+}
+
+.travel-as-normal {
+	background-image: image-url("travel-as-normal-icon.png");
+	background-repeat: no-repeat;
+	background-position: 0 5px;
+}
+
 .heading-48 {
 	margin-top:25px;
-	margin-bottom:45px;
+	margin-bottom:35px;
+	margin-left:-2px
+}
+
+span.heading-27 {
+	margin-left: 1px;
 }
 
 .ruled {
@@ -13,36 +43,101 @@
 
 img.map {
 	width:100%;
-	margin-top:20px;
+	margin-top:18px;
+	margin-bottom: 35px;
 }
 
-.link_to_world {
-	display:block;
-	width:100%;
-	margin-bottom:10px;
+ul.top-tasks {
+
+	display:inline-block;
+	margin:32px 0 0 -15px;
+	padding:0;
+
+	li {
+
+		list-style:none;
+		margin-bottom:8px;
+
+		a {
+			display:block;
+			width:100%;
+			font-weight:700;
+			text-decoration:none;
+			@include bold-16;
+		}
+	}
+}
+
+ul.updates {
+	display:inline-block;
+	margin:0 0 8px 0;
+	padding:0;
+
+	li {
+		float:left;
+		margin:0;
+		padding:0;
+		margin-right:20px;
+
+		a {
+			display:block;
+			padding-left:34px;
+
+			&.email {
+				background-image: image-url("mail-icon.png");
+				background-repeat: no-repeat;
+			}
+
+			&.feed {
+				background-image: image-url("feed-icon.png");
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}
+
+.twitter {
+	margin-top:25px;
+}
+
+.connect {
+	float: left;
+	display: inline;
+	width: 25px;
+	height: 25px;
+	text-indent: -999em;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-top:-4px;
+	background-color: #2e3191;
+	background-image: image-url("social-icons-white.png");
+	background-position: -2px -32px;
+	background-repeat: no-repeat;
+}
+
+nav
+	ol {
+		margin-left:0;
+
+		li a {
+		text-decoration:none;
+
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+}
+
+.active {
 	font-weight:700;
 	text-decoration:none;
 }
-.advice-status {
-	display:block;
-	margin-bottom:30px;
-}
+
 
 .more_details {
 	display:block;
 	margin-top:-15px;
 }
-
-.entry-and-exit {
-
-	padding-top:15px;
-	margin-top:35px;
-
-	h1 {
-		@include bold-24;
-	}
-}
-
 
 nav li:before {
 	content: "-";
@@ -64,7 +159,8 @@ nav li {
 
 .visitor_info {
 
-	padding-top:15px;
+	//padding-top:25px;
+	margin-bottom:50px;
 
 	h2 {
 		@include bold-24;
@@ -78,4 +174,60 @@ nav li {
 ul li {
 	list-style:disc;
 	margin-left:18px;
+}
+
+.chaptered {
+	margin-top:25px;
+	margin-bottom:80px;
+}
+
+.chapter_details {
+	margin-top:5px;
+
+	h1 {
+		@include bold-24;
+		margin-bottom:30px;
+	}
+
+	h2 {
+		@include bold-19;
+		margin-top:30px;
+	}
+}
+
+#chapter-nav {
+	margin-left: 15px;
+
+	h1 {
+		@include core-16;
+		margin-left:-17px;
+		margin-bottom:12px;
+	}
+}
+
+.part {
+	margin-bottom: 65px;
+
+	&:last-child {
+		margin-bottom: 100px;
+	}
+}
+
+.current-status {
+	@include core-16;
+	margin-bottom: 45px;
+	margin-top:12px;
+}
+
+.timestamp,
+.status {
+	display:inline-block;
+	width:100%;
+	margin-bottom:3px;
+}
+
+.meta {
+	display:inline-block;
+	color:$grey-1;
+	width:25%;
 }

@@ -65,6 +65,26 @@
 
 <%= yield %>
 
+
+
+<!-- report_a_problem -->
+<div class="report-a-problem-container">
+  <h2>Help us improve GOV.UK</h2>
+  <form accept-charset="UTF-8" action="/contact/govuk/problem_reports" method="post">
+    <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+    <input id="url" name="url" type="hidden" value="https://www.gov.uk/types-of-school"><input id="source" name="source" type="hidden" value=""><input id="page_owner" name="page_owner" type="hidden" value=""><p>Please don't include any personal or financial information,
+      for example your National Insurance or credit card numbers.</p>
+
+    <label for="what_doing">What you were doing</label>
+    <input id="what_doing" name="what_doing" type="text"><label for="what_wrong">What went wrong</label>
+    <input id="what_wrong" name="what_wrong" type="text"><div><button name="commit" type="submit" class="button">Send</button></div>
+
+    <!--<p>If you have more extensive feedback, please visit the <a href="/feedback">support page</a>.</p>-->
+  <input type="hidden" name="javascript_enabled" value="true"><input type="hidden" name="referrer" value="unknown"></form>
+</div>
+<!-- end report_a_problem -->
+
+
 </main>
 </div>
 
@@ -131,7 +151,11 @@
 </div>
 </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
 
-<script src="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-724fe6d14191deb75213ea14cf80e5d0.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-a031b0d3983fc0204a9e042d8286e1c9.js" type="text/javascript"></script>
+<!-- <script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-a031b0d3983fc0204a9e042d8286e1c9.js" type="text/javascript"></script>
+<script src="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-1d29c0379552e7f7ab67500dea47df2d.js" type="text/javascript"></script>
+<script src="https://assets.digital.cabinet-office.gov.uk/static/libs/jquery/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script>
+<script src="https://assets.digital.cabinet-office.gov.uk/static/application-678b18e5de5de94a11eeb0e4662408ef.js" type="text/javascript"></script> -->
+
 
 </body>
 
