@@ -12,19 +12,19 @@
 .no-travel {
 	background-image: image-url("no-travel-icon.png");
 	background-repeat: no-repeat;
-	background-position: 0 5px;
+	background-position: 0 2px;
 }
 
 .essential-travel-only {
 	background-image: image-url("essential-travel-only-icon.png");
 	background-repeat: no-repeat;
-	background-position: 0 5px;
+	background-position: 0 2px;
 }
 
 .travel-as-normal {
 	background-image: image-url("travel-as-normal-icon.png");
 	background-repeat: no-repeat;
-	background-position: 0 5px;
+	background-position: 0 2px;
 }
 
 .heading-48 {
@@ -64,6 +64,10 @@ ul.top-tasks {
 			font-weight:700;
 			text-decoration:none;
 			@include bold-16;
+
+			&:hover {
+				text-decoration:underline;
+			}
 		}
 	}
 }
@@ -163,7 +167,7 @@ nav li {
 	margin-bottom:50px;
 
 	h2 {
-		@include bold-24;
+		@include bold-19;
 	}
 
 	p, li, a {
@@ -178,7 +182,6 @@ ul li {
 
 .chaptered {
 	margin-top:25px;
-	margin-bottom:80px;
 }
 
 .chapter_details {
@@ -224,10 +227,22 @@ ul li {
 	display:inline-block;
 	width:100%;
 	margin-bottom:3px;
+	width:75%;
 }
 
 .meta {
 	display:inline-block;
 	color:$grey-1;
 	width:25%;
+	vertical-align:top;
+}
+
+.stickit {
+  position: fixed;
+  top: 20px;
+}
+
+.stickit-end {
+  position: absolute;
+	bottom: 40px;
 }

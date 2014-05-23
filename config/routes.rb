@@ -1,16 +1,21 @@
 GovukPrototypingRails::Application.routes.draw do
-  
+
   get "foreigntraveladvice/index"
   get "foreigntraveladvice/egypt"
+  get "foreigntraveladvice/portugal"
+  get "foreigntraveladvice/syria"
   get "examples/index"
   get "examples" => 'examples#index'
+  get "foreign-travel-advice" => 'foreigntraveladvice#index'
   get "foreign-travel-advice/egypt" => 'foreigntraveladvice#egypt'
-  
+  get "foreign-travel-advice/portugal" => 'foreigntraveladvice#portugal'
+  get "foreign-travel-advice/syria" => 'foreigntraveladvice#syria'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'foreigntraveladvice#egypt'
+  root 'foreigntraveladvice#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

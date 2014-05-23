@@ -19,6 +19,7 @@
 
 function onScroll(event){
   var scrollPos = $(document).scrollTop();
+  //console.log(scrollPos);
   $('#chapter-nav a').each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
@@ -30,10 +31,6 @@ function onScroll(event){
           currLink.removeClass("active");
       }
   });
-
-  if($("#chapter-nav").offset().top + $("#chapter-nav").height() > $("footer").offset().top) {
-
-  }
 }
 
 $(document).ready(function(){
