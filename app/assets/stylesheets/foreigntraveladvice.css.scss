@@ -214,6 +214,10 @@ ul li {
 	&:last-child {
 		margin-bottom: 100px;
 	}
+
+	p {
+		max-width:670px;
+	}
 }
 
 .current-status {
