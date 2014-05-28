@@ -54,6 +54,12 @@
 			<div class="current-status">
 				<span class="meta">Advice current: </span><span class="timestamp"><%= (Time.now).strftime('%d %b, %Y')  %></span>
 				<span class="meta">Latest update: </span><span class="status">Removal of advice about Benfica v Tottenham Hotspur</span>
+				<span class="meta updates">Get updates: </span><span class="status">
+					<ul class="subscriptions">
+						<li><a href="https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL" class="email-alerts" title="Subscribe to email alerts">email</a></li>
+						<li><a href="/foreign-travel-advice.atom" class="feed" title="Subscribe via RSS">feed</a></li>
+					</ul>
+				</span>
 			</div>
 
 			<section class="advice-status travel-as-normal">
@@ -63,12 +69,13 @@
 				<p>The Foreign and Commonwealth Office (FCO) currently considers that Portugal has a low risk of terrorism.</p>
 				<!-- <span class="more_details"><a href="#travel-as-normal">More on this region</a></span> -->
 			</section>
+
 		</div>
 	</div>
 
 	<div class="grid grid-1-2">
 		<div class="inner-block">
-			<%= image_tag("http://placehold.it/1000x750/cccccc/cccccc", :class => "map") %>
+			<%= image_tag("http://placehold.it/1000x1000/cccccc/cccccc", :class => "map") %>
 		</div>
 	</div>
 
@@ -159,24 +166,37 @@
 
 			<section class="part" id="health">
 				<h1>Health</h1>
-				<p>For health advice on Egypt, visit the National Travel Health Network and Centre.</p>
-				<p>Medical facilities outside Cairo, major cities and resorts can be basic.  In an emergency, seek treatment in Cairo or the nearest big city or town.
-				In an emergency dial 123 and ask for an ambulance.
-				Pre-travel Hepatitis A vaccine is now recommended for all travellers.
-				Information about healthcare abroad, including a country-by-country guide to reciprocal healthcare agreements with the UK, is available from <a href="http://www.nhs.uk">NHS Choices</a>.</p>
+				<h2>Vaccinations</h2>
+				<p>You don’t need any special vaccinations to visit Portugal.  You may want to consider Hepatitis A and Tetanus as optional vaccinations.</p>
+				<h2>Dengue Fever</h2>
+				<p>Dengue Fever exists on the island of Madeira, although numbers are <a href="http://www.nathnac.org/pro/clinical_updates/dengue_madeira_180213.htm">declining</a>.</p>
+				<p>There are no drugs or vaccines for Dengue Fever. Follow <a href="http://www.nathnac.org/pro/factsheets/iba.htm">mosquito bite avoidance advice</a>. </p>
+				<h2>European Health Insurance Card <a href="http://www.nhs.uk/NHSEngland/Healthcareabroad/EHIC/Pages/about-the-ehic.aspx">(EHIC)</a></h2>
+				<p>Get a free European Health Insurance Card before you leave the UK.</p>
+				<p>The EHIC:</p>
+				<ul>
+				<li>allows you Portuguese state medical treatment in an emergency</li>
+				<li>won’t cover repatriation, on-going or non-urgent treatment</li>
+				<li>isn’t a substitute for medical and travel insurance - make sure you also have proper insurance and funds in place</li>
+				</ul>
+				<p>If you’ve lost or forgotten your EHIC, you can get a temporary replacement.  Call the Department of Health Overseas Healthcare Team (+44 191 218 1999).</p>
+				<h2>More information</h2>
+				<p><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.nathnac.org%2Fds%2Fc_pages%2Fcountry_page_PT.htm&sa=D&sntz=1&usg=AFQjCNHDrC2nl2kiUkjIjRUN33vSinZitQ">The National Travel Health Network and Centre</a> has specific health advice for Portugal.</p>
+				<p>Useful information about healthcare abroad, including a country-by-country guide, is available from NHS Choices.</p>
+
 			</section>
 
 			<section class="part" id="where-to-get-help">
 				<h1>Where to get help</h1>
-				<p>If you have any questions about travelling, email the <a href="TravelAdvicePublicEnquiries@fco.gov.uk">FCO Travel Advice Team</a>. To find out if your passport is valid for travel to this country, see <a href="/travel-advice/egypt/entry-and-exit">Entry and Exit</a>.</p>
-				<h2>Emergencies</h2>
-				<p>Call 123 when in Egypt.</p>
-				<h2>Embassies</h2>
-				<p>[served by API]</p>
-				<h2>Arrested abroad</h2>
-				<p>Find out what help you can get if you or someone you know is <a href="/help-if-you-are-arrested-abroad">arrested abroad</a>.</p>
-				<h2>UK Emergency Travel Document</h2>
-				<p>You can use an Emergency Travel Document (ETD) to leave Egypt. But you can’t use one to enter the country.</p>
+<p>If you have any questions about travelling, email the <a href="mailto:TravelAdvicePublicEnquiries@fco.gov.uk">FCO Travel Advice Team</a>. To find out if your passport is valid for travel to this country, see <a href="/travel-advice/portugal/entry-and-exit">Entry and Exit</a>.</p>
+<h2>Emergencies</h2>
+<p>Call 112 when in Portugal.</p>
+<h2>Embassies</h2>
+<p>[served by API]</p>
+<h2>Arrested abroad</h2>
+<p>Find out what help you can get if you or someone you know is <a href="https://gov.uk/help-if-you-are-arrested-abroad">arrested abroad</a>.</p>
+<h2>Emergency passport</h2>
+<p>You can use an <a href="https://www.gov.uk/emergency-travel-document">Emergency Travel Document</a> (ETD) to enter and leave the country if your passport has been lost or stolen.</p>
 			</section>
 		</div>
 	</div>

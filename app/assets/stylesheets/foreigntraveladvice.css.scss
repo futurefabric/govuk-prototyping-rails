@@ -72,29 +72,39 @@ ul.top-tasks {
 	}
 }
 
-ul.updates {
+.updates {
+	margin-top:5px;
+}
+
+ul.subscriptions {
 	display:inline-block;
-	margin:0 0 8px 0;
+	margin:5px 0 8px 0;
 	padding:0;
 
 	li {
+		list-style:none;
 		float:left;
 		margin:0;
 		padding:0;
-		margin-right:20px;
+		margin-right:22px;
 
 		a {
 			display:block;
-			padding-left:34px;
+			padding-left:22px;
+			text-decoration:none;
+			@include bold-16;
 
-			&.email {
+			&.email-alerts {
 				background-image: image-url("mail-icon.png");
 				background-repeat: no-repeat;
+				background-position:0 2px;
+				padding-left:28px;
 			}
 
 			&.feed {
 				background-image: image-url("feed-icon.png");
 				background-repeat: no-repeat;
+				background-position:0 1px;
 			}
 		}
 	}
@@ -224,6 +234,8 @@ ul li {
 	@include core-16;
 	margin-bottom: 45px;
 	margin-top:12px;
+	border-bottom: 1px solid #dee0e2;
+	padding-bottom: 0;
 }
 
 .timestamp,
