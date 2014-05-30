@@ -6,22 +6,19 @@
 		<div class="grid grid-2-3 title_intro">
 			<div class="inner-block">
 			<h1 class="heading-48">
-			<span class="heading-27">Foreign travel advice</span>Egypt</h1>
-			<!-- <p>Current travel advice from the Foreign and Commonwealth Office (FCO)</p> -->
+			<span class="heading-27">Foreign travel advice</span>Sinai Peninsula, Egypt</h1>
 			</div>
 		</div>
 
 		<div class="grid grid-1-3">
 			<div class="inner-block">
 				<ul class="top-tasks">
+					<li><a href="https://www.gov.uk/government/world/egypt">Foreign travel advice for Egypt</a></li>
 					<li><a href="https://www.gov.uk/government/world/egypt">UK and Egypt</a></li>
 					<li><a href="https://www.gov.uk/government/world/organisations/british-embassy-cairo">British Embassy Cairo</a></li>
 					<li><a href="http://twitter.com/FCOtravel" target="_blank" class="twitter"><span class="connect">Connect with FCO Travel on</span>FCOTravel on Twitter</a></li>
 				</ul>
 
-
-				<!-- Get updates for Egypt<br />
-				email feed -->
 			</div>
 		</div>
 	</div>
@@ -40,47 +37,23 @@
 <!-- GRID: HALF / HALF -->
 <div class="grid-wrapper">
 
-	<div class="grid grid-1-2 visitor_info">
+	<div class="grid grid-2-3 visitor_info">
 		<div class="inner-block">
+			<section class="region_details">
 
-			<div class="current-status">
-				<span class="meta">Advice current: </span><span class="timestamp"><%= (Time.now).strftime('%d %b, %Y')  %></span>
-				<span class="meta">Latest update: </span><span class="status">Terrorism - possibility of attacks on foreign tourists. Enhanced security in Hurghada</span>
-				<span class="meta updates">Get updates: </span><span class="status">
-					<ul class="subscriptions">
-						<li><a href="https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL" class="email-alerts" title="Subscribe to email alerts">email</a></li>
-						<li><a href="https://gov.uk/foreign-travel-advice.atom" target="_blank" class="feed" title="Subscribe via RSS">feed</a></li>
-					</ul>
-				</span>
-			</div>
+				<h1>North Sinai</h1>
+				<p>sdadas</p>
 
-			<section class="advice-status no-travel">
-				<h2>Travel not advised</h2>
-				<p>Travel to <a href="egypt/sinai">North Sinai</a> is not advised.</p>
-				<!-- <span class="more_details"><a href="#no-travel">More on this region</a></span> -->
-			</section>
+				<h1>South Sinai</h1>
+				<p>sdadas</p>
 
-			<section class="advice-status essential-travel-only">
-				<h2>Essential travel only advised</h2>
-				<p>Reconsider travel to <a href="egypt/sinai">South Sinai</a> and the Governorates of Beni Suef, Minya, Asyut and Sohag.</p>
-			</section>
-
-			<section class="advice-status travel-as-normal">
-			<h2>Travel as normal</h2>
-				<p>Take normal safety precautions in:
-				<ul>
-					<li>the Red Sea Resorts between and including Taba and Sharm el Sheikh.</li>
-					<li>the St Catherine’s Monastery World Heritage Site.</li>
-					<li>road travel from the Red Sea resorts to St Catherine’s Monastery approaching from the east.</li>
-				</ul>
 			</section>
 		</div>
 	</div>
 
-	<div class="grid grid-1-2">
-		<div class="inner-block mapping">
-			<a href="<%= asset_path 'egypt_map_large.png' %>"><%= image_tag("egypt_map.jpg", :class => "map") %></a>
-			<p><a href="<%= asset_path 'egypt_map_large.png' %>">View detailed Egypt map</a></p>
+	<div class="grid grid-1-3">
+		<div class="inner-block">
+			<%= image_tag("sinai_map.png", :class => "map") %>
 		</div>
 	</div>
 
@@ -89,8 +62,28 @@
 
 
 
+<!-- <div class="grid-wrapper">
+	<div class="grid">
+		<div class="inner-block">
+			<section class="entry-and-exit">
+
+				<h1>Entry and exit requirements</h1>
+				<h2>Passport validity</h2>
+				<p>Your passport should be valid for a minimum of 6 months from the date you enter Egypt.</p>
+
+				<h2>Visa</h2>
+				<p>British passport holders normally need a visa. You can buy one on arrival, if you’re staying less than 30 days.
+				Or you can get a visa from an Egyptian Consulate before you go.</p>
+				<p>If you’re visiting Sharm El Sheikh, Dahab, Nuweiba or Taba for less than 15 days, you’ll get a free entry permission stamp on arrival.
+				But you must get a visa, if you want to stay longer than 15 days or travel out of these resorts. You can normally buy one at Sharm El Sheikh airport.</p>
+
+			</section>
+		</div>
+	</div>
+</div> -->
 
 
+<!--
 <div class="grid-wrapper">
 	<div class="grid">
 		<div class="inner-block">
@@ -100,7 +93,7 @@
 </div>
 
 
-<!-- GRID: TWO THIRDS / ONE THIRD -->
+
 <div class="grid-wrapper chaptered">
 	<div class="grid grid-1-4">
 		<div class="inner-block sticky-nav">
@@ -139,10 +132,6 @@
 
 			<section class="part" id="safety-and-security">
 				<h1>Safety and security</h1>
-				<h2>Detailed summary</h2>
-				<!-- <p id="no-travel">Travel not advised info</p>
-				<p id="essential-travel-only">Essential travel only advised info</p>
-				<p id="travel-as-normal">Travel as normal info</p> -->
 				<h2>Protests</h2>
 				<p>Many people have died in violent clashes since President Morsi was removed from office in July 2013. Protests often happen on Fridays but can also happen at any time with little notice.</p>
 				<p>Police may use water cannon, tear gas, birdshot or live ammunition for crowd control. Don’t cross roadblocks put up by the security forces or protesters.</p>
@@ -206,4 +195,4 @@
 		</div>
 	</div>
 </div>
-<!-- / GRID: TWO THIRDS / ONE THIRD -->
+-->

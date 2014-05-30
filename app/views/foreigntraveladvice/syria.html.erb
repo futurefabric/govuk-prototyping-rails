@@ -7,7 +7,6 @@
 			<div class="inner-block">
 			<h1 class="heading-48">
 			<span class="heading-27">Foreign travel advice</span>Syria</h1>
-			<!-- <p>Current travel advice from the Foreign and Commonwealth Office (FCO)</p> -->
 			</div>
 		</div>
 
@@ -16,20 +15,8 @@
 				<ul class="top-tasks">
 					<li><a href="https://www.gov.uk/government/world/syria">UK and Syria</a></li>
 					<li><a href="https://www.gov.uk/government/world/organisations/british-embassy-damascus">British Embassy Damascus</a></li>
-
-					<!-- <li>
-						<ul class="updates">
-							<li><a href="#" class="email">Email updates</a></li>
-							<li><a href="#" class="feed">Feed</a></li>
-						</ul>
-					</li> -->
-
 					<li><a href="http://twitter.com/FCOtravel" target="_blank" class="twitter"><span class="connect">Connect with FCO Travel on</span>FCOTravel on Twitter</a></li>
 				</ul>
-
-
-				<!-- Get updates for Egypt<br />
-				email feed -->
 			</div>
 		</div>
 	</div>
@@ -53,7 +40,13 @@
 
 			<div class="current-status">
 				<span class="meta">Advice current: </span><span class="timestamp"><%= (Time.now).strftime('%d %b, %Y')  %></span>
-				<span class="meta">Latest update: </span><span class="status">There have been a number of recent media reports alleging use of chemical weapons in Syria.</span>
+				<span class="meta">Latest update: </span><span class="status">16 April, 2014 — There have been a number of recent media reports alleging use of chemical weapons in Syria.</span>
+				<span class="meta updates">Get updates: </span><span class="status">
+					<ul class="subscriptions">
+						<li><a href="https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL" class="email-alerts" title="Subscribe to email alerts">email</a></li>
+						<li><a href="https://gov.uk/foreign-travel-advice.atom" target="_blank" class="feed" title="Subscribe via RSS">feed</a></li>
+					</ul>
+				</span>
 			</div>
 
 			<section class="advice-status no-travel">
@@ -63,42 +56,21 @@
 				<p>Military action is ongoing and British nationals should leave Syria now.</p>
 				<p>The FCO can’t offer consular services or help you leave the country.
 				If you visit Syria against FCO advice, read <a href="#safety-and-security">Safety and security</a>.</p>
-				<!-- <span class="more_details"><a href="#no-travel">More on this region</a></span> -->
 			</section>
 
 		</div>
 	</div>
 
 	<div class="grid grid-1-2">
-		<div class="inner-block">
-			<%= image_tag("http://placehold.it/1000x750/cccccc/cccccc", :class => "map") %>
+		<div class="inner-block mapping">
+			<!--<%= image_tag("http://placehold.it/1000x1000/cccccc/cccccc", :class => "map") %>-->
+			<a href="<%= asset_path 'syria_map_large.png' %>"><%= image_tag("syria_map.png", :class => "map") %></a>
+			<p><a href="<%= asset_path 'syria_map_large.png' %>">View detailed Syria map</a></p>
 		</div>
 	</div>
 
 </div>
 <!-- / GRID: HALF / HALF -->
-
-
-
-<!-- <div class="grid-wrapper">
-	<div class="grid">
-		<div class="inner-block">
-			<section class="entry-and-exit">
-
-				<h1>Entry and exit requirements</h1>
-				<h2>Passport validity</h2>
-				<p>Your passport should be valid for a minimum of 6 months from the date you enter Egypt.</p>
-
-				<h2>Visa</h2>
-				<p>British passport holders normally need a visa. You can buy one on arrival, if you’re staying less than 30 days.
-				Or you can get a visa from an Egyptian Consulate before you go.</p>
-				<p>If you’re visiting Sharm El Sheikh, Dahab, Nuweiba or Taba for less than 15 days, you’ll get a free entry permission stamp on arrival.
-				But you must get a visa, if you want to stay longer than 15 days or travel out of these resorts. You can normally buy one at Sharm El Sheikh airport.</p>
-
-			</section>
-		</div>
-	</div>
-</div> -->
 
 
 

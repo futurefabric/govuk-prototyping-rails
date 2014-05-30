@@ -1,7 +1,7 @@
 class ForeigntraveladviceController < ApplicationController
   def index
     @title = 'Prototypes — Foreign travel advice - GOV.UK'
-    @has_breadcrumbs = true
+    @has_breadcrumbs = false
     @has_related_links = false
   end
 
@@ -9,6 +9,12 @@ class ForeigntraveladviceController < ApplicationController
   	@title = 'Egypt travel advice - GOV.UK'
 		@has_breadcrumbs = true
 		@has_related_links = false
+  end
+
+  def egypt_sinai
+    @title = 'Sinai, Egypt travel advice - GOV.UK'
+    @has_breadcrumbs = true
+    @has_related_links = false
   end
 
   def portugal

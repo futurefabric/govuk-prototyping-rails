@@ -2,12 +2,15 @@ GovukPrototypingRails::Application.routes.draw do
 
   get "foreigntraveladvice/index"
   get "foreigntraveladvice/egypt"
+  get "foreigntraveladvice/egypt/sinai"
   get "foreigntraveladvice/portugal"
   get "foreigntraveladvice/syria"
   get "examples/index"
   get "examples" => 'examples#index'
   get "foreign-travel-advice" => 'foreigntraveladvice#index'
   get "foreign-travel-advice/egypt" => 'foreigntraveladvice#egypt'
+  get "foreign-travel-advice/egypt/south-sinai" => 'foreigntraveladvice#egypt_sinai'
+  get "foreign-travel-advice/egypt/sinai" => 'foreigntraveladvice#egypt_sinai'
   get "foreign-travel-advice/portugal" => 'foreigntraveladvice#portugal'
   get "foreign-travel-advice/syria" => 'foreigntraveladvice#syria'
 

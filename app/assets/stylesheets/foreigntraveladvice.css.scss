@@ -44,13 +44,20 @@ span.heading-27 {
 img.map {
 	width:100%;
 	margin-top:18px;
-	margin-bottom: 35px;
+	//margin-bottom: 35px;
+}
+
+.mapping {
+	p {
+		@include core-16;
+		float:right;
+	}
 }
 
 ul.top-tasks {
 
 	display:inline-block;
-	margin:32px 0 0 -15px;
+	margin:32px 0 8px -15px;
 	padding:0;
 
 	li {
@@ -86,7 +93,7 @@ ul.subscriptions {
 		float:left;
 		margin:0;
 		padding:0;
-		margin-right:22px;
+		margin-right:18px;
 
 		a {
 			display:block;
@@ -261,4 +268,21 @@ ul li {
 .stickit-end {
   position: absolute;
 	bottom: 40px;
+}
+
+
+// Sinai specific styles
+
+.region_details {
+	margin-top:25px;
+
+	h1 {
+		@include bold-24;
+		margin-bottom:10px;
+	}
+
+	h1 {
+		@include bold-24;
+		margin-bottom:10px;
+	}
 }

@@ -10,7 +10,6 @@
   <link rel="shortcut icon" href="https://assets.digital.cabinet-office.gov.uk/static/favicon-447e4ac1ab790342660eacfe3dcce264.ico" type="image/x-icon">
   <link href="https://assets.digital.cabinet-office.gov.uk/static/application-f77c1a6a3f7a9f6fa84ac3fb96e466a5.css" media="screen" rel="stylesheet" type="text/css">
 
-
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -56,8 +55,10 @@
 </div>
 </section>
 
+
+
 <div id="global-breadcrumb" class="header-context">
-<%= render partial: "breadcrumbs" if @has_breadcrumbs %>
+<%= render partial: "#{request['action']}_breadcrumbs" if @has_breadcrumbs %>
 </div>
 
 <div id="wrapper" class="guide guide">
