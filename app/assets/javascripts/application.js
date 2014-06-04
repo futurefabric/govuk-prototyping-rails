@@ -34,8 +34,10 @@ function onScroll(event){
 }
 
 $(document).ready(function(){
-  if($("#chapter-nav").length !== -1) {
-    $("#chapter-nav").sticky({topSpacing:20});
-    $(document).on("scroll", onScroll);
+  if($(window).width() >= 800) {
+    if($("#chapter-nav").length !== -1) {
+      $("#chapter-nav").sticky({topSpacing:20});
+      $(document).on("scroll", onScroll);
+    }
   }
 });
