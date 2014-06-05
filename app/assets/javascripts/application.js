@@ -33,7 +33,35 @@ function onScroll(event){
   });
 }
 
+$.urlParam = function(name){
+    var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+    return results[1] || 0;
+}
+
+function appendParamToLinkURLs(paramValue) {
+  $("a").each(function(){
+    if(this.href.indexOf('#') == -1) {
+  	   this.href = this.href + "?id=" + paramValue;
+
+    }
+	});
+  console.log('parameter appended to hrefs');
+}
+
+function checkForParamInURL() {
+  var url = window.location.href;
+  if(url.indexOf('?id=') != -1) {
+    console.log('parameter id found in url');
+
+    appendParamToLinkURLs($.urlParam('id'));
+  }
+}
+
+
 $(document).ready(function(){
+
+  checkForParamInURL();
+
   if($(window).width() >= 800) {
     if($("#chapter-nav").length !== -1) {
       $("#chapter-nav").sticky({topSpacing:20});

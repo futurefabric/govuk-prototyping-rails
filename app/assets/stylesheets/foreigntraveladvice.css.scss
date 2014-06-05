@@ -9,6 +9,12 @@
 	margin-bottom:30px;
 }
 
+.advice-status-gmap {
+	padding-left:0;
+	display:block;
+	margin-bottom:30px;
+}
+
 .no-travel {
 	background-image: image-url("no-travel-icon.png");
 	background-repeat: no-repeat;
@@ -25,6 +31,12 @@
 	background-image: image-url("travel-as-normal-icon.png");
 	background-repeat: no-repeat;
 	background-position: 0 2px;
+}
+
+.travel-as-normal-gmap {
+	background-image: none;//image-url("travel-as-normal-icon-gmap.png");
+	//background-repeat: no-repeat;
+	//background-position: 0 2px;
 }
 
 .heading-48 {
@@ -188,7 +200,7 @@ nav li {
 	}
 
 	p, li, a {
-		@include core-16;
+		@include core-19;
 	}
 }
 
