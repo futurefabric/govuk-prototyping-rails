@@ -133,6 +133,15 @@ ul.subscriptions {
 	margin-top:25px;
 }
 
+.embassy {
+	margin-top:30px;
+	margin-bottom:60px;
+
+	p {
+		@include core-16;
+	}
+}
+
 .connect {
 	float: left;
 	display: inline;
@@ -223,7 +232,7 @@ ul li {
 
 	h2 {
 		@include bold-19;
-		margin-top:30px;
+		//margin-top:50px;
 	}
 }
 
