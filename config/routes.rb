@@ -1,5 +1,6 @@
 GovukPrototypingRails::Application.routes.draw do
   
+  root "apply_carers_allowance#index"
   get "examples/index"
   get "examples" => 'examples#index'
   get "learn-to-drive" => "apply_carers_allowance#index"
