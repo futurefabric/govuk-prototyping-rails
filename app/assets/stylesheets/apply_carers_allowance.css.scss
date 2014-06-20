@@ -85,6 +85,10 @@ span.beta {
 	margin-right: 10px;
 }
 
+.beta-label {
+		margin-bottom: 10px;
+}
+
 p.this-is-a-beta {
 margin: 0;
 padding-top: 0;
@@ -175,4 +179,24 @@ p.example {
 
 h3 {
  @include bold-19;
+ margin-right: 1em;
+}
+
+.list {
+	li {
+		@include core-19;
+		font-weight: 700;
+		margin-top: 0;
+	}
+	a {
+		text-decoration: none;
+		color: #05ea5;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.grid {
+	margin-top: 1em;
 }
