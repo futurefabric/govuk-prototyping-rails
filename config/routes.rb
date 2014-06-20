@@ -1,18 +1,8 @@
 GovukPrototypingRails::Application.routes.draw do
   
-  get "apply_carers_allowance/index"
-  get "apply-carers-allowance" => 'apply_carers_allowance#index'
-
   get "examples/index"
   get "examples" => 'examples#index'
-  
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'apply_carers_allowance#index'
-  match "carers_allowance_yes" => "apply_carers_allowance#carers_response_yes", via: [:get, :post]
-
+  get "learn-to-drive" => "apply_carers_allowance#index"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
