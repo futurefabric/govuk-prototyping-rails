@@ -1,3 +1,56 @@
 // Place all the styles related to the embassies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.a-z {
+  h1 {
+    margin:0;
+  }
+}
+
+.country {
+  width:30%;
+  float:left;
+  clear:both;
+
+  h2 {
+    margin:6px 0 0 0;
+    font-weight:700;
+    font-size:24px;
+  }
+}
+
+.region {
+  float:left;
+  width:20%;
+
+  h2 {
+    margin:11px 0 0 0;
+    font-weight:400;
+    font-size:19px;
+  }
+}
+
+.locations {
+  float:left;
+  width:50%;
+}
+
+.govuk ol {
+  font-weight: 700;
+  float: left;
+  margin: 10px 0 40px 0;
+  list-style: none;
+
+  li {
+    margin-bottom:10px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+}
