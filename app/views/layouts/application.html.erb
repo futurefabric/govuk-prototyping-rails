@@ -4,11 +4,11 @@
 
   <title><%= raw(@title) %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-a75ed8fe7ded5740f6e2592bb758ac22.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-296c9ceea9f9f0640fb88a63b438c03b.css" media="screen" rel="stylesheet" type="text/css">
   <link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-print-e8347470022aae909a6076606e53d420.css" media="print" rel="stylesheet" type="text/css">
   <link href="https://assets.digital.cabinet-office.gov.uk/static/fonts-607c54f71c7c1f98257595cedaa13a34.css" media="all" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="https://assets.digital.cabinet-office.gov.uk/static/favicon-447e4ac1ab790342660eacfe3dcce264.ico" type="image/x-icon">
-  <link href="https://assets.digital.cabinet-office.gov.uk/static/application-f77c1a6a3f7a9f6fa84ac3fb96e466a5.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="https://assets.digital.cabinet-office.gov.uk/static/application-1bccfa753900b3baa011164bf3893a14.css" media="screen" rel="stylesheet" type="text/css">
 
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -55,6 +55,12 @@
 <p><a href="https://www.surveymonkey.com/s/6HZFSVC" id="take-survey" target="_blank">Take the 3 minute survey</a> This will open a short survey on another website</p>
 </div>
 </section>
+
+<div id="global-header-bar">
+  <div class="inner-block">
+    <div class="header-bar"></div>
+  </div>
+</div>
 
 <div id="global-breadcrumb" class="header-context">
 <%= render partial: "breadcrumbs" if @has_breadcrumbs %>

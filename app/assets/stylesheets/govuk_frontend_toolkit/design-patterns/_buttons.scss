@@ -1,26 +1,24 @@
 @import '../_shims.scss';
 @import '../_css3.scss';
 @import '../_conditionals.scss';
+@import '../_colours.scss';
 
-/*
+// Mixin and defaults for making buttons on GOV.UK services.
 
-Mixin and defaults for making buttons on GOV.UK services.
+// For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
 
-For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
+// Example usage:
 
-Example usage:
+// .button{
+//   @include button;
+// }
+// .button-secondary{
+//   @include button($grey-3);
+// }
+// .button-warning{
+//   @include button($red);
+// }
 
-.button{
-  @include button;
-}
-.button-secondary{
-  @include button($grey-3);
-}
-.button-warning{
-  @include button($red);
-}
-
-*/
 
 @mixin button($colour: $button-colour){
   // Colour
@@ -29,7 +27,7 @@ Example usage:
   // Size and shape
   position: relative;
   @include inline-block;
-  padding: 0.35em 0.5em 0.15em 0.5em;
+  padding: 0.3em 0.6em 0.2em 0.6em;
   border: none;
   @include border-radius(0);
   -webkit-appearance: none;
@@ -112,7 +110,7 @@ Example usage:
   &:active:before {
     top: -10%;
     height: 120%;
-    
+
     // IE6 ignores the :before psuedo-class but applies the block to :active
     // It therefore needs to be reset
     @include ie(6) {
