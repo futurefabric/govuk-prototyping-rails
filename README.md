@@ -21,3 +21,15 @@ Some caveats:
 * It uses copies of the [frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) and [design patterns grids](http://alphagov.github.io/design-patterns/example/grid.html), both of which may need copying across again if they change significantly.
 
 It's probably not that much use to others, but help yourself if you want to clone :)
+
+
+## Installing
+
+This prototyping tool is essentially not much more than a Rails app with some additional SCSS and markup made available to make making pages easier.
+As such, the first prerequisite is to have [Rails 4](http://rubyonrails.org/) installed.
+
+With ruby installed and ideally managed using [rbenv](https://github.com/sstephenson/rbenv) you can then install Rails with RubyGems with the command
+
+```
+gem install rails
+```
