@@ -46,3 +46,19 @@ With Rails successfully installed, you should then clone this repository to a lo
 ```
 git clone git@github.com:futurefabric/govuk-prototyping-rails.git
 ```
+
+### Run the server
+
+In the command line, cd in to the repo you just cloned.
+To start the rails server, run:
+
+```
+rails server
+```
+
+You should now be able to view the default example view of this prototyping app by going to http://localhost:3000 in your browser.
+
+
+### More soon
+
+Updating this readme as and when I have time, more soon.
