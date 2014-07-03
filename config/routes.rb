@@ -1,5 +1,6 @@
 GovukPrototypingRails::Application.routes.draw do
   
+  get "embassies/index"
   get "examples/index"
   get "examples" => 'examples#index'
   
