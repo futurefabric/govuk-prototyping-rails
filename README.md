@@ -26,10 +26,23 @@ It's probably not that much use to others, but help yourself if you want to clon
 ## Installing
 
 This prototyping tool is essentially not much more than a Rails app with some additional SCSS and markup made available to make making pages easier.
-As such, the first prerequisite is to have [Rails 4](http://rubyonrails.org/) installed.
 
-With ruby installed and ideally managed using [rbenv](https://github.com/sstephenson/rbenv) you can then install Rails with RubyGems with the command
+### Install Rails
+
+The first prerequisite is to have [Rails 4](http://rubyonrails.org/) installed.
+
+Rails can be installed using RubyGems, which requires ruby to be installed on your machine.
+
+With ruby installed (and ideally managed using [rbenv](https://github.com/sstephenson/rbenv)) you can then install Rails with RubyGems with the command:
 
 ```
 gem install rails
+```
+
+### Clone this repo
+
+With Rails successfully installed, you should then clone this repository to a location of your choice on your machine:
+
+```
+git clone git@github.com:futurefabric/govuk-prototyping-rails.git
 ```
