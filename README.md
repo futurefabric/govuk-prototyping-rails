@@ -27,7 +27,7 @@ It's probably not that much use to others, but help yourself if you want to clon
 
 This prototyping tool is essentially not much more than a Rails app with some additional SCSS and markup made available to make making pages easier.
 
-### Install Rails
+#### Install Rails
 
 The first prerequisite is to have [Rails 4](http://rubyonrails.org/) installed.
 
@@ -39,7 +39,7 @@ With ruby installed (and ideally managed using [rbenv](https://github.com/ssteph
 gem install rails
 ```
 
-### Clone this repo
+#### Clone this repo
 
 With Rails successfully installed, you should then clone this repository to a location of your choice on your machine:
 
@@ -47,7 +47,7 @@ With Rails successfully installed, you should then clone this repository to a lo
 git clone git@github.com:futurefabric/govuk-prototyping-rails.git
 ```
 
-### Run the server
+#### Run the server
 
 In the command line, cd in to the repo you just cloned.
 To start the rails server, run:
@@ -62,7 +62,7 @@ You should now be able to view the default example view of this prototyping app 
 
 The idea is to have separate branches for separate prototypes, which can then optionally be deployed to their own respective heroku apps.
 
-### 1. Set up a local branch for your prototype
+#### 1. Set up a local branch for your prototype
 
 This should be the first thing you do. *Do not* make commits/push to master when making a prototype. I will be really unhappy and may cry.
 To set up your local branch, first create it and then check it out:
@@ -73,7 +73,7 @@ git checkout -b your_prototype_name
 
 
 
-### 2. Set up your default index page
+#### 2. Set up your default index page
 
 By default, when you go to [http://localhost:3000](http://localhost:3000) the prototyping app will serve up an example page showing some dummy content laid out using the [GOV.UK elements](http://govuk-elements.herokuapp.com/) grid system, which works responsively.
 
@@ -88,6 +88,6 @@ To remove this default example index page and replace it with one for your proto
 
 
 
-### More soon
+## More soon
 
 Updating this readme as and when I have time, more soon.
