@@ -2,55 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.a-z {
-  h1 {
-    margin:0;
-  }
-}
-
-.country {
-  width:30%;
-  float:left;
-  clear:both;
+.govuk {
 
   h2 {
-    margin:6px 0 0 0;
-    font-weight:700;
-    font-size:24px;
+    font-weight: 700;
+    display:block;
+    clear:both;
+    //float:left;
   }
-}
 
-.region {
-  float:left;
-  width:20%;
+  ul {
+    font-weight: 700;
+    //float: right;
+    margin: 10px 0 40px 0;
+    list-style: none;
 
-  h2 {
-    margin:11px 0 0 0;
-    font-weight:400;
-    font-size:19px;
-  }
-}
+    li {
+      margin-bottom:10px;
 
-.locations {
-  float:left;
-  width:50%;
-}
+      a {
+        text-decoration: none;
 
-.govuk ol {
-  font-weight: 700;
-  float: left;
-  margin: 10px 0 40px 0;
-  list-style: none;
-
-  li {
-    margin-bottom:10px;
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration:underline;
+        &:hover {
+          text-decoration:underline;
+        }
       }
     }
+  }
+
+  ul.locations {
+    //float:none;
   }
 }
