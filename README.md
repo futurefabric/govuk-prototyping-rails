@@ -56,19 +56,37 @@ To start the rails server, run:
 rails server
 ```
 
-You should now be able to view the default example view of this prototyping app by going to http://localhost:3000 in your browser.
+You should now be able to view the default example view of this prototyping app by going to [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## How to use
 
 The idea is to have separate branches for separate prototypes, which can then optionally be deployed to their own respective heroku apps.
 
-### Set up a branch for your prototype
+### 1. Set up a local branch for your prototype
 
-If you don't do this and push to master
+This should be the first thing you do. *Do not* make commits/push to master when making a prototype. I will be really unhappy and may cry.
+To set up your local branch, first create it and then check it out:
 
 ```
 git checkout -b your_prototype_name
 ```
+
+
+
+### 2. Set up your default index page
+
+By default, when you go to [http://localhost:3000](http://localhost:3000) the prototyping app will serve up an example page showing some dummy content laid out using the [GOV.UK elements](http://govuk-elements.herokuapp.com/) grid system, which works responsively.
+
+This is for two reasons. Firstly, because it's a 'hello world' that shows everything has worked to this point. Secondly, because it gives you some example HTML and CSS to refer to when making layouts.
+
+To remove this default example index page and replace it with one for your prototype, you'll need to do two things:
+
+1. Create a controller
+2. Set up a route
+
+
+
+
 
 ### More soon
 
