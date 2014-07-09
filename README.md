@@ -79,13 +79,22 @@ By default, when you go to [http://localhost:3000](http://localhost:3000) the pr
 
 This is for two reasons. Firstly, because it's a 'hello world' that shows everything has worked to this point. Secondly, because it gives you some example HTML and CSS to refer to when making layouts.
 
-To remove this default example index page and replace it with one for your prototype, you'll need to do two things:
+To remove this default example index page and replace it with one for your prototype, you'll need to do two things: create a controller and set up a route.
 
-1. Create a controller
-2. Set up a route
+#### 2.1 Create a controller
+
+A controller in an MVC framework like Rails tells the app what to do when a user visits a certain url. When making a prototype it is what we'll use to separate out different parts or pages of the prototype.
+
+To create a controller for your new default index page, run:
+
+```
+rails generate controller home index
+```
+
+This will create the controller (and associated files) for a page that now lives at [http://localhost:3000/home/index](http://localhost:3000/home/index)
 
 
-
+#### 2.2 Set up a route
 
 
 ## More soon
