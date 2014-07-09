@@ -58,6 +58,9 @@ rails server
 
 You should now be able to view the default example view of this prototyping app by going to http://localhost:3000 in your browser.
 
+## How to use the app
+
+The idea is to have separate branches for separate prototypes, which can then optionally be deployed to their own respective heroku apps.
 
 ### More soon
 
