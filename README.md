@@ -62,6 +62,14 @@ You should now be able to view the default example view of this prototyping app 
 
 The idea is to have separate branches for separate prototypes, which can then optionally be deployed to their own respective heroku apps.
 
+### Set up a branch for your prototype
+
+If you don't do this and push to master
+
+```
+git checkout -b your_prototype_name
+```
+
 ### More soon
 
 Updating this readme as and when I have time, more soon.
