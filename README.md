@@ -59,7 +59,7 @@ rails server
 You should now be able to view the default example view of this prototyping app by going to [http://localhost:3000](http://localhost:3000) in your browser.
 It should look something like this:
 
-![alt tag](https://raw.githubusercontent.com/futurefabric/govuk-prototyping-rails/master/public/examples.png)
+![alt tag](https://raw.githubusercontent.com/futurefabric/govuk-prototyping-rails/6a253f4b4a6ffbff77c568ab301bfa6848f20032/public/examples.png)
 
 ## How to use
 
