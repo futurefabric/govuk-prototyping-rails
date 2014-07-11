@@ -4,19 +4,42 @@
 
 .govuk {
 
+  h1,
   h2 {
     font-weight: 700;
     display:block;
-    clear:both;
+  }
+
+  .embassy-listing {
+
+    h1, h2 {
+      clear: both;
+      float: left;
+      position: relative;
+    }
+
+    h1 {
+      @include bold-27;
+      width: 35%;
+    }
+
+    h2 {
+      width:100%;
+      margin-bottom:8px;
+    }
   }
 
   ul {
     font-weight: 700;
-    margin: 10px 0 40px 0;
+    margin:4px 0 15px 0;
     list-style: none;
+    display:block;
+    float: left;
+    position: relative;
+    width: 65%;
 
     li {
-      margin-bottom:10px;
+      margin-bottom:8px;
 
       a {
         text-decoration: none;
@@ -29,6 +52,14 @@
   }
 
   ul.locations {
+    display:block;
+    float: left;
+    position: relative;
+    width: 100%;
+    margin:0 0 30px 0;
 
+    li {
+
+    }
   }
 }
