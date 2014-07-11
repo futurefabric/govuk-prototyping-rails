@@ -48,11 +48,13 @@
     margin:4px 0 35px 0;
     list-style: none;
     display:block;
+    border-bottom:1px solid #ccc;
 
     @include media(desktop) {
       float: left;
       position: relative;
       width: 65%;
+
     }
 
     li {
@@ -73,11 +75,13 @@
 
     width: 100%;
     margin:0 0 16px 0;
+    border-bottom:none;
 
     @include media(desktop) {
       float: left;
       position: relative;
       margin:0 0 16px 0;
+
     }
 
     li {
