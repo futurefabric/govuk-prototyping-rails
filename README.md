@@ -2,7 +2,7 @@ User Formats prototyping tool
 =============================
 
 The purpose of this app is to allow User Formats designers to prototype html layouts that can
-be linked together and published publicly for user testing.
+be linked together and published publicly for research and usability testing.
 
 It exists for the following reasons:
 
@@ -79,7 +79,7 @@ By default, when you go to [http://localhost:3000](http://localhost:3000) the pr
 
 This is for two reasons. Firstly, because it's a 'hello world' that shows everything has worked to this point. Secondly, because it gives you some example HTML and CSS to refer to when making layouts.
 
-To remove this default example index page and replace it with one for your prototype, you'll need to do two things: create a controller and set up a route.
+To remove this default example index page (which will therafter still be available at [http://localhost:3000/examples](http://localhost:3000/examples)) and replace it with one for your prototype, you'll need to do two things: create a controller and set up a route.
 
 #### 2.1 Create a controller
 
@@ -95,6 +95,11 @@ This will create the controller (and associated files) for a page that now lives
 
 
 #### 2.2 Set up a route
+
+Routes allow you to direct visits to certain urls to certain controllers.
+
+In the case of our new prototype, we want to set the default root url ([http://localhost:3000](http://localhost:3000)) be to be the new page we just created.
+
 
 
 ## More soon
