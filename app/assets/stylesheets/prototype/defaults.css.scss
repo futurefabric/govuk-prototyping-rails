@@ -12,10 +12,9 @@ h1 {
 }
 
 h1 span {
+  @include core-36;
   color: #6f777b;
   display: block;
-  font-size: 37px;
-  font-weight: normal;
   margin-bottom:5px;
   padding-top:20px;
 }
