@@ -2,6 +2,15 @@ GovukPrototypingRails::Application.routes.draw do
   
   get "examples/index"
   get "examples" => 'examples#index'
+
+  get "health_conditions_and_driving/index"
+  get "health_conditions_and_driving" => 'health_conditions_and_driving#index'
+
+  get "diabetes_driving/index"
+  get "diabetes_driving" => 'diabetes_driving#index'
+
+  get "tell_dvla/index"
+  get "tell_dvla" => 'tell_dvla#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,85 @@
+.conditions h1 {
+  @include core-19;
+  margin-top: 0;
+}
+
+p.health-conditions-count {
+  margin: 0;
+  span.js-filter-count {
+    @include core-80;
+    font-weight: 700;
+  }
+}
+
+.conditions-wrapper {
+ border-top:1px solid #bfc1c3;
+ margin-top: 1em;
+ padding-top: 2em;
+}
+
+.list,
+.list ul {
+	width: 100%;
+}
+
+.list {
+border-bottom: 1px solid #ccc;
+@extend %contain-floats;
+}
+
+.list h2 {
+  @include core-80;
+  font-weight: 700;
+  margin-top: 0.4em;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.health-list {
+padding-top: 20px;
+float: left;
+}
+
+.health-list li {
+width: 45%;
+float: left;
+margin-right: 5%;
+@include core-16;
+a {
+ color: #2e8aca;
+}
+}
+
+.diabetes {
+  h2 {
+    @include bold-24;
+  }
+  h3 {
+    @include bold-19;
+  }
+}
+
+.get-started {
+  margin-right: 2em;
+}
+
+.notify {
+  a {
+  text-decoration: underline;
+  color: #2e8aca;
+}
+}
+
+.inform {
+ border-top:1px solid #bfc1c3;
+ padding: 0;
+ margin: 0;
+}
+
+.popular-needs {
+padding-top: 20px;
+a {
+  @include bold-16;
+  text-decoration: none;
+}
+}
