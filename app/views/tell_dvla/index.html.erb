@@ -1,45 +1,72 @@
-<%= javascript_include_tag "travel-advice.js" %>
-
 <!-- PAGE HEADING -->
 <div class="grid-wrapper">
-	<div class="grid">
+    <div class="grid grid-2-3">
 		<div class="inner-block">
-		<h1 class="heading-48">Contact DVLA about driving and medical issues</h1>
+		<h1 class="heading-48">Tell DVLA about your diabetes</h1>
 		</div>
 	</div>
 </div>
 
 
-<!-- GRID: FULL WIDTH -->
-<div class="grid-wrapper">
-	<div class="grid">
-		<div class="inner-block">
-        <section id="conditions-filter" class="group">
-        	<p>Tell DVLA if you or someone you know has a medical condition, disability or is unsafe to drive.</p>
-        </section>
-		
-		<div class="conditions-wrapper">
-        <div class="grid grid-2-3 conditions">
-          <h1>Health conditions</h1> 
+	<div class="grid-wrapper tell-dvla">
+        <div class="grid grid-2-3">
+          <div class="inner-block">
+          
 
           <form action="" method="post" class="form">
-            <fieldset class="inline">
-              <legend></legend>
+            <fieldset class="inline"> 
+              <legend><h1>What type of licence do you have?</h1></legend>
               <label for="radio-inline-1" class="block-label">
                 <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
-                Yes
+                Car or motorcycle licence
               </label>
               <label for="radio-inline-2" class="block-label">
                 <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
-                No
+                Bus, coach or lorry licence
               </label>
             </fieldset>
-          </form>      
+          </form> 
+
+          <form action="" method="post" class="form">
+            <fieldset>
+              <legend><h1>How is your diabetes being treated?</h1></legend>
+              <div class="form-group">
+                <label for="radio-1" class="block-label">
+                  <input id="radio-1" type="radio" name="radio-group" value="1">
+                  Sulphonylureas or Glinide tablets (or both)
+                </label>
+                <label for="radio-2" class="block-label">
+                  <input id="radio-2" type="radio" name="radio-group" value="2">
+                  Any other tablets or non-insulin injections
+                </label>
+                 <label for="radio-3" class="block-label">
+                    <input id="radio-3" type="radio" name="radio-group" value="3">
+                    Insulin
+                  </label>
+              </div>
+            </fieldset>
+          </form>  
+
+          <form action="" method="post" class="form form-group-example">
+
+            <fieldset class="inline">
+              <legend class="form-label">Do you know their National Insurance number?</legend>
+              <div class="form-group form-group-related">
+                <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
+                  <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                  Yes
+                </label>
+                <label for="radio-indent-2" class="block-label">
+                  <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                  No
+                </label>
+              </div>
+              <div class="panel-indent toggle-content" id="example-ni-number">
+                <label for="national-insurance" class="form-label">National Insurance number</label>
+                <input type="text" class="form-control" id="national-insurance">
+              </div>
+            </fieldset>
+          </form>    
         </div>
      </div>
-	</div>
-</div>
-<!-- / GRID: FULL WIDTH -->
 
-</div>
-<!-- / GRID: QUARTERS -->
