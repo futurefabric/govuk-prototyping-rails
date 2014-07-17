@@ -10,24 +10,35 @@
     display:block;
   }
 
-  h1.a-z-heading {
-    @include bold-48;
-    margin-bottom:15px;
-    display:none;
-
-    @include media(desktop) {
-      display:block;
-    }
-  }
-
   .embassy-listing {
 
-    margin-top:30px;
+    margin-top:20px;
     display: inline-block;
     margin-bottom: 100px;
 
+    span.a-z-heading {
+
+      display:none;
+
+      @include media(desktop) {
+        display:block;
+        clear: both;
+        position: absolute;
+        width: 12%;
+      }
+
+      h1 {
+        @include bold-48;
+        margin-bottom:15px;
+        width: 100%;
+        margin-left:0;
+      }
+    }
+
     h1, h2 {
       width:100%;
+      @include bold-24;
+
       @include media(desktop) {
         clear: both;
         float: left;
@@ -36,11 +47,13 @@
     }
 
     h1 {
-      @include bold-24;
+
       margin-bottom:12px;
 
       @include media(desktop) {
-        width: 35%;
+        width: 23%;
+        margin-left:17%;
+        margin-right:3%;
       }
     }
 
@@ -52,7 +65,7 @@
 
   ul {
     font-weight: 700;
-    margin:4px 0 35px 0;
+    margin:0 0 35px 0;
     list-style: none;
     display:block;
     border-bottom:1px solid #ccc;
@@ -60,15 +73,14 @@
     @include media(desktop) {
       float: left;
       position: relative;
-      width: 65%;
-
+      width: 57%;
     }
 
     li {
       margin-bottom:8px;
 
       p {
-        margin-top:-1px;
+        margin-top:4px;
       }
       a {
         text-decoration: none;
