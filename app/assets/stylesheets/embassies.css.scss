@@ -70,7 +70,7 @@
 
   ul {
     font-weight: 700;
-    margin:0 0 35px 0;
+    margin:0 0 25px 0;
     list-style: none;
     display:block;
     border-bottom:1px solid #ccc;
@@ -85,12 +85,13 @@
       margin-bottom:8px;
 
       p {
-
+        display:block;
         margin-top: 0;
         margin-bottom: 24px;
+        @include core-16;
 
         a {
-          @include core-19;
+          @include core-16;
         }
       }
       a {
