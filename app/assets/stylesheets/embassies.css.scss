@@ -37,7 +37,7 @@
 
     h1, h2 {
       width:100%;
-      @include bold-24;
+
 
       @include media(desktop) {
         clear: both;
@@ -47,7 +47,7 @@
     }
 
     h1 {
-
+      @include bold-24;
       margin-bottom:12px;
 
       @include media(desktop) {
@@ -58,8 +58,13 @@
     }
 
     h2 {
+      @include bold-19;
       width:100%;
       margin-bottom:8px;
+
+      @include media(desktop) {
+        @include bold-24;
+      }
     }
   }
 
@@ -80,10 +85,17 @@
       margin-bottom:8px;
 
       p {
-        margin-top:4px;
+
+        margin-top: 0;
+        margin-bottom: 24px;
+
+        a {
+          @include core-19;
+        }
       }
       a {
         text-decoration: none;
+        //@include bold-24;
 
         &:hover {
           text-decoration:underline;
