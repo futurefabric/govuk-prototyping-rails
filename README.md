@@ -97,11 +97,30 @@ rails generate controller home index
 This will create the controller (and associated files) for a page that now lives at [http://localhost:3000/home/index](http://localhost:3000/home/index)
 
 
-#### 2.2 Set up a route
+#### 2.2 Set your prototype root
 
-Routes allow you to direct visits to certain urls to certain controllers.
+Routes allow you to map urls to controllers.
 
-In the case of our new prototype, we want to set the default root url ([http://localhost:3000](http://localhost:3000)) be to be the new page we just created.
+In the case of our new prototype, we might want to make a cleaner, tidier url so that our default index page sits at the root url ([http://localhost:3000](http://localhost:3000)).
+
+To do this you need to edit config/routes.rb.
+
+Open this file and change the site root by replacing:
+
+```
+root 'examples#index'
+```
+
+with:
+
+```
+root 'home#index'
+```
+
+Your newly created view should now be viewable at [http://localhost:3000](http://localhost:3000)
+
+
+#### 2.3 Set up another custom route
 
 
 
