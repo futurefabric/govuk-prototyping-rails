@@ -121,7 +121,7 @@ Save your changes and the page can now be viewed at [http://localhost:3000/home/
 
 
 
-### Edit the view.
+### Edit the view
 
 If you want to edit the html for the page you just created, you'll need to edit it's view.
 
@@ -162,6 +162,28 @@ Save your changes and your newly created view should now be viewable at [http://
 You can add more controllers and routes to create the urls you need for your prototype.
 
 Let's say we want to make a page that lives at http://localhost:3000/contact
+
+To do this, you would first generate a controller for it:
+
+```
+rails generate controller contact index
+```
+
+Then you would configure your page as described above.
+
+Then open up config/routes.rb and add the following to this file (ideally beneat where the root is specified)
+
+```
+get 'contact' => 'contact#index'
+```
+
+This tells Rails that any request for http://localhost:3000/contact should use the contact controller and specifically, it's index action.
+
+This will then automatically look for a file in app/views/contact/index.html.erb and display it in the browser.
+
+Try it. Save your changes and go to [http://localhost:3000/contact](http://localhost:3000/contact).
+
+
 
 
 
