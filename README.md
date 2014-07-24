@@ -252,3 +252,9 @@ git push prototype-name-heroku your-local-branch-name:master
 ```
 
 This will push your app to the heroku address you set in step 2.
+
+And your done...
+
+
+
+maybe.
