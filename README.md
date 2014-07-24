@@ -163,7 +163,7 @@ You can add more controllers and routes to create the urls you need for your pro
 
 Let's say we want to make a page that lives at http://localhost:3000/contact
 
-To do this, you would first generate a controller for it:
+To do this, you would first generate a controller for it. In your command line:
 
 ```
 rails generate controller contact index
@@ -171,7 +171,7 @@ rails generate controller contact index
 
 Then you would configure your page as described above.
 
-Then open up config/routes.rb and add the following to this file (ideally beneat where the root is specified)
+Then open up config/routes.rb and add the following to this file (ideally beneath where the root is specified)
 
 ```
 get 'contact' => 'contact#index'
