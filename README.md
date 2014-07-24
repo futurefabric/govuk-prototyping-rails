@@ -183,8 +183,23 @@ This will then automatically look for a file in app/views/contact/index.html.erb
 
 Try it. Save your changes and go to [http://localhost:3000/contact](http://localhost:3000/contact).
 
+You can do this as many times as you need for different pages and then link them together.
 
 
+### Breadcrumbs and related links
+
+If you want either of this things to appear on a page, change the variable to true in the appropriate controller.
+
+Then copy the following two files from app/views/examples to the folder of the view you want them to appear in:
+
+```
+_breadcrumbs.html.erb
+_related_links.html.erb
+```
+
+When you visit the page you will now see breadcrumbs and related links added.
+
+To edit the content for these two components, open the above files and make the changes you need to.
 
 
 ## More soon
