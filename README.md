@@ -188,7 +188,7 @@ You can do this as many times as you need for different pages and then link them
 
 ### Breadcrumbs and related links
 
-If you want either of this things to appear on a page, change the variable to true in the appropriate controller.
+If you want either of these things to appear on a page, change the variable to true in the appropriate controller.
 
 Then copy the following two files from app/views/examples to the folder of the view you want them to appear in:
 
@@ -202,6 +202,51 @@ When you visit the page you will now see breadcrumbs and related links added.
 To edit the content for these two components, open the above files and make the changes you need to.
 
 
-## More soon
+## Deploying
 
-Updating this readme as and when I have time, more soon.
+At some point you'll probably need to share your prototype on a public url.
+
+To do this, it's probably best to use [Heroku](http://heroku.com). For two reasons: it's free (albeit the page may take time to initally be served to the browser) and it plays nicely with Rails and git.
+
+This prototyping app was made with the following in mind:
+
+* One branch per prototype
+* One Heroku app per prototype
+
+This means each prototype is isolated and not affected by others and can also be permanently available on a given Heroku url.
+
+So a branch needs to map to a Heroku app. Follow these steps:
+
+1. If you haven't already, create an account on [Heroku](http://heroku.com) and install the [toolbelt](https://toolbelt.heroku.com/).
+
+2. Create an Heroku app. In your command line (replacing 'prototype-name' with the name of your prototype):
+
+```
+heroku apps:create prototype-name
+```
+
+This will create an app at http://prototype-name.herokuapp.com
+
+3. Confirm creation and that remote set up.
+
+```
+git remote
+```
+
+Should show a remote called heroku. We need to rename this to match our prototype:
+
+4. Rename remote
+
+```
+git remote rename <old> <new>
+
+(eg.  git remote rename heroku prototype-name-heroku)
+```
+
+5. To deploy
+
+```
+git push prototype-name-heroku your-local-branch-name:master
+```
+
+This will push your app to the heroku address you set in step 2.
