@@ -217,9 +217,11 @@ This means each prototype is isolated and not affected by others and can also be
 
 So a branch needs to map to a Heroku app. Follow these steps:
 
-1. If you haven't already, create an account on [Heroku](http://heroku.com) and install the [toolbelt](https://toolbelt.heroku.com/).
+### 1. Heroku account and toolbelt
+If you haven't already, create an account on [Heroku](http://heroku.com) and install the [toolbelt](https://toolbelt.heroku.com/).
 
-2. Create an Heroku app. In your command line (replacing 'prototype-name' with the name of your prototype):
+### 2. Create an Heroku app.
+In your command line (replacing 'prototype-name' with the name of your prototype):
 
 ```
 heroku apps:create prototype-name
@@ -227,7 +229,7 @@ heroku apps:create prototype-name
 
 This will create an app at http://prototype-name.herokuapp.com
 
-3. Confirm creation and that remote set up.
+### 3. Confirm creation and that remote set up.
 
 ```
 git remote
@@ -235,7 +237,7 @@ git remote
 
 Should show a remote called heroku. We need to rename this to match our prototype:
 
-4. Rename remote
+### 4. Rename remote
 
 ```
 git remote rename <old> <new>
@@ -243,7 +245,7 @@ git remote rename <old> <new>
 (eg.  git remote rename heroku prototype-name-heroku)
 ```
 
-5. To deploy
+### 5. Deploy
 
 ```
 git push prototype-name-heroku your-local-branch-name:master
