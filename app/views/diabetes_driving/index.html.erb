@@ -105,4 +105,80 @@
 </div>
 </div>
 
+<!-- GRID: FULL WIDTH -->
+<div class="grid-wrapper">
+    <div class="grid">
+
+        <form action="" class="form" id="passports" name="passports">
+      
+      <h2 class="heading-24">How is your diabetes treated?</h2>
+      <fieldset>
+        <div class="form-group form-radio passport-type">
+           <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Diet
+        </label>
+       <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Tablets
+        </label>
+       <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Insulin injection
+        </label>
+         <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Insulin pump
+        </label>
+        <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Other non injectable
+        </label>
+        </div>
+      </fieldset>
+
+      <h2 class="heading-24">What type of licence do you have?</h2>
+      <fieldset>
+        <div class="form-group form-radio">
+           <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            I don't have a licence yet
+        </label>
+        <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Car or motorcycle licence
+        </label>
+        <label for="child" class="block-label">
+            <input id="child" type="radio" name="adult_or_child" value="child">
+            Bus, coach or lorry licence
+        </label>
+        </div>
+      </fieldset>
+    </form>
+
+    <div id="hello1" class="hello" style="display: none;"><p>hi 1</p></div>
+    <div id="hello2" class="hello" style="display: none;"><p>hi 2</p></div>
+
+    <button id="continue2" type="button" class="medium button">Continue</button>
+
+    
+    </div>
+</div>
+
+<script src="jquery.fastLiveFilter.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $('#continue2').click(function() {
+        $('.hello').hide();
+        if($('input[name=adult_or_child]:checked').val() == 'adult'){
+          $('#hello1').show();
+        }
+        if($('input[name=adult_or_child]:checked').val() == 'child'){
+          $('#hello2').show();
+        }
+        return false;
+      });
+    });
+  </script>
+
 <!-- / GRID: QUARTERS -->
