@@ -21,163 +21,171 @@
 <!-- GRID: TWO THIRDS / ONE THIRD -->
 <div class="grid-wrapper">
 	<div class="grid grid-2-3">
-		<div class="inner-block diabetes">
-			<div class="summary">
+		<div class="inner-block">
+			<div>
 				<p>You may need to tell <abbr title="Driver Vehicle and Licensing Agency">DVLA</abbr> about your diabetes, depending on how it’s treated and the licence you have.</p>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="grid-wrapper">
-    <div class="grid">
-        <div class="inner-block">
-            <p class="line"></p>
-</div>
-</div>
-</div>
-
-<div class="grid-wrapper tell-dvla toppy">
-	<div class="grid grid-1-3">
-		<div class="inner-block">
-		<h2 class="heading-24">Diabetes treated by diet</h2>
-		</div>
-	</div>
-
-	<div class="grid grid-2-3">
-		<div class="inner-block">
-		<h2 class="heading-24">Car or motorcycle licence</h2>
-		<p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p>
-    <h2 class="heading-24">Bus, coach or lorry licence</h2>
-        <p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p>
-    </div>
-</div>
-</div>
-
-<div class="grid-wrapper tell-dvla">
-    <div class="grid grid-1-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Diabetes treated by Sulphonylureas or Glinide tablets (or both)</h2>
-        </div>
-    </div>
-
-    <div class="grid grid-2-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Car or motorcycle licence</h2>
-        <p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p>
-    <h2 class="heading-24">Bus, coach or lorry licence</h2>
-        <p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p>
-    </div>
-</div>
-</div>
-
-<div class="grid-wrapper tell-dvla">
-    <div class="grid grid-1-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Diabetes treated by any other tablets or non-insulin injections</h2>
-        </div>
-    </div>
-
-    <div class="grid grid-2-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Car or motorcycle licence</h2>
-        <p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p>
-    <h2 class="heading-24">Bus, coach or lorry licence</h2>
-        <p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p>
-    </div>
-</div>
-</div>
-
-<div class="grid-wrapper tell-dvla">
-    <div class="grid grid-1-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Diabetes treated by insulin</h2>
-        </div>
-    </div>
-
-    <div class="grid grid-2-3">
-        <div class="inner-block">
-        <h2 class="heading-24">Car or motorcycle licence</h2>
-        <p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p>
-    <h2 class="heading-24">Bus, coach or lorry licence</h2>
-         <p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p>
-    </div>
-</div>
-</div>
-
 <!-- GRID: FULL WIDTH -->
 <div class="grid-wrapper">
     <div class="grid">
+     <div class="inner-block">
 
         <form action="" class="form" id="passports" name="passports">
       
       <h2 class="heading-24">How is your diabetes treated?</h2>
-      <fieldset>
+      <fieldset class="diabetes-form">
         <div class="form-group form-radio passport-type">
-           <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+           <label for="diet" class="block-label">
+            <input id="diet" type="radio" name="treated" value="diet">
             Diet
         </label>
-       <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+       <label for="tablets" class="block-label">
+            <input id="tablets" type="radio" name="treated" value="tablets">
             Tablets
         </label>
-       <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+       <label for="insulin" class="block-label">
+            <input id="insulin" type="radio" name="treated" value="insulin">
             Insulin injection
         </label>
-         <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+         <label for="pump" class="block-label">
+            <input id="pump" type="radio" name="treated" value="pump">
             Insulin pump
         </label>
-        <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+        <label for="injectable" class="block-label">
+            <input id="injectable" type="radio" name="treated" value="injectable">
             Other non injectable
         </label>
         </div>
       </fieldset>
 
       <h2 class="heading-24">What type of licence do you have?</h2>
-      <fieldset>
+      <fieldset class="diabetes-form">
         <div class="form-group form-radio">
-           <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+           <label for="no" class="block-label">
+            <input id="no" type="radio" name="licence_type" value="no">
             I don't have a licence yet
         </label>
-        <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+        <label for="car" class="block-label">
+            <input id="car" type="radio" name="licence_type" value="car">
             Car or motorcycle licence
         </label>
-        <label for="child" class="block-label">
-            <input id="child" type="radio" name="adult_or_child" value="child">
+        <label for="bus" class="block-label">
+            <input id="bus" type="radio" name="licence_type" value="bus">
             Bus, coach or lorry licence
         </label>
         </div>
       </fieldset>
     </form>
 
-    <div id="hello1" class="hello" style="display: none;"><p>hi 1</p></div>
-    <div id="hello2" class="hello" style="display: none;"><p>hi 2</p></div>
-
     <button id="continue2" type="button" class="medium button">Continue</button>
-
     
-    </div>
+        </div>    
+   </div>
+</div>
+
+<div class="grid-wrapper">
+    <div class="grid grid-2-3">
+        <div class="inner-block diabetes">
+
+  <div id="dont" class="hello" style="display: none;"><p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p></div>
+    <div id="tell" class="hello" style="display: none;"><p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p></div>
+
+</div>
+</div>
 </div>
 
 <script src="jquery.fastLiveFilter.js"></script>
   <script>
     $( document ).ready(function() {
+        var treatmentOption;
+        var licenceType;
+        var selectedTreatmentRadioButton = $('input[name=treated]').filter(':checked');
+        var selectedLicenceTypeRadioButton = $('input[name=licence_type]').filter(':checked');
+
+        // if a treatment option is chosen, store it in treatmentOption
+        if (selectedTreatmentRadioButton.length > 0)  {
+            treatmentOption = $('input[name=treated]').filter(':checked').val();
+        }
+
+        // if a licence type is chosen, store it in licence_type
+        if (selectedLicenceTypeRadioButton.length > 0)  {
+            treatmentOption = $('input[name=licence_type]').filter(':checked').val();
+        }
+
+        // set stored values when radios are clicked
+        $('input[name=treated]').click(function () {
+            treatmentOption = $(this).val(); 
+        });
+        $('input[name=licence_type]').click(function () {
+            licenceType = $(this).val();
+        });
+
+        // decide to show the container based on the options seleted
+        $("#continue2").click(function () {
+            $("#hello1").hide();
+            if ((licenceType === "bus") && (treatmentOption === "diet")) {
+                $('#dont').show();
+            }
+            if ((licenceType === "car") && (treatmentOption === "diet")) {
+                $('#dont').show();
+            }
+            if ((licenceType === "no") && (treatmentOption === "diet")) {
+                $('#dont').show();
+            }
+            if ((licenceType === "bus") && (treatmentOption === "tablets")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "car") && (treatmentOption === "tablets")) {
+                $('#dont').show();
+            }
+            if ((licenceType === "no") && (treatmentOption === "tablets")) {
+                $('#dont').show();
+            }
+            if ((licenceType === "bus") && (treatmentOption === "insulin")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "car") && (treatmentOption === "insulin")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "no") && (treatmentOption === "insulin")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "bus") && (treatmentOption === "pump")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "car") && (treatmentOption === "pump")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "no") && (treatmentOption === "pump")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "bus") && (treatmentOption === "injection")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "car") && (treatmentOption === "injection")) {
+                $('#tell').show();
+            }
+            if ((licenceType === "no") && (treatmentOption === "injection")) {
+                $('#tell').show();
+            }
+            return false;
+        });
+        /*
       $('#continue2').click(function() {
         $('.hello').hide();
-        if($('input[name=adult_or_child]:checked').val() == 'adult'){
+        if($('input[name=treated], input[name=licence_type]').val() == 'diet, bus'){
           $('#hello1').show();
         }
-        if($('input[name=adult_or_child]:checked').val() == 'child'){
+        if($('input[name=licence_type]).val() == 'bus'){
           $('#hello2').show();
         }
         return false;
       });
+*/
     });
   </script>
 

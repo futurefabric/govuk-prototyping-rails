@@ -50,14 +50,6 @@ a {
 }
 }
 
-.diabetes {
-  h2 {
-    @include bold-24;
-  }
-  h3 {
-    @include bold-19;
-  }
-}
 
 .get-started {
   margin-right: 2em;
@@ -124,7 +116,7 @@ label {
 // Position checkbox within label, to allow text to wrap
 .block-label input {
   position: absolute;
-  top: 18px;
+  top: 24px;
   left: 15px;
   cursor: pointer;
 }
@@ -165,11 +157,28 @@ label {
 margin-bottom: 0;
 }
 
-.line {
- border-top:1px solid #bfc1c3;
- padding-top: 0;
-}
-
 .toppy.grid {
   padding-top: 0;
+}
+
+.form-checkbox {
+    margin-top:-20px;
+    margin-left:13px;
+  }
+
+  form {
+    margin-top:45px;
+  }
+
+  .diabetes-form {
+  padding-bottom: 2em;
+  }
+
+
+.govuk .heading-24 {
+margin-top: 20px;
+}
+
+.hello {
+  padding-top: 3em;
 }
