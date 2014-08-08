@@ -32,58 +32,54 @@
 <!-- GRID: FULL WIDTH -->
 <div class="grid-wrapper">
     <div class="grid">
-     <div class="inner-block">
+        <div class="inner-block">
+            <form action="" class="form diabetes-form">
+              <h2 class="heading-24">What do you treat your diabetes with?</h2>
+              <fieldset>
+                <div class="form-group form-radio passport-type">
+                   <label for="diet" class="block-label">
+                    <input id="diet" type="radio" name="treated" value="diet">
+                    Diet
+                </label>
+               <label for="tablets" class="block-label">
+                    <input id="tablets" type="radio" name="treated" value="tablets">
+                    Tablets
+                </label>
+               <label for="insulin" class="block-label">
+                    <input id="insulin" type="radio" name="treated" value="insulin">
+                    Insulin injection
+                </label>
+                 <label for="pump" class="block-label">
+                    <input id="pump" type="radio" name="treated" value="pump">
+                    Insulin pump
+                </label>
+                <label for="injectable" class="block-label">
+                    <input id="injectable" type="radio" name="treated" value="injectable">
+                    Other non injectable
+                </label>
+                </div>
+              </fieldset>
 
-        <form action="" class="form" id="passports" name="passports">
-      
-      <h2 class="heading-24">What do you treat your diabetes with?</h2>
-      <fieldset class="diabetes-form">
-        <div class="form-group form-radio passport-type">
-           <label for="diet" class="block-label">
-            <input id="diet" type="radio" name="treated" value="diet">
-            Diet
-        </label>
-       <label for="tablets" class="block-label">
-            <input id="tablets" type="radio" name="treated" value="tablets">
-            Tablets
-        </label>
-       <label for="insulin" class="block-label">
-            <input id="insulin" type="radio" name="treated" value="insulin">
-            Insulin injection
-        </label>
-         <label for="pump" class="block-label">
-            <input id="pump" type="radio" name="treated" value="pump">
-            Insulin pump
-        </label>
-        <label for="injectable" class="block-label">
-            <input id="injectable" type="radio" name="treated" value="injectable">
-            Other non injectable
-        </label>
-        </div>
-      </fieldset>
+              <h2 class="heading-24">What type of licence do you have?</h2>
+              <fieldset>
+                <div class="form-group form-radio">
+                   <label for="no" class="block-label">
+                    <input id="no" type="radio" name="licence_type" value="no">
+                    I don't have a licence yet
+                </label>
+                <label for="car" class="block-label">
+                    <input id="car" type="radio" name="licence_type" value="car">
+                    Car or motorcycle licence
+                </label>
+                <label for="bus" class="block-label">
+                    <input id="bus" type="radio" name="licence_type" value="bus">
+                    Bus, coach or lorry licence
+                </label>
+                </div>
+              </fieldset>
 
-      <h2 class="heading-24">What type of licence do you have?</h2>
-      <fieldset class="diabetes-form">
-        <div class="form-group form-radio">
-           <label for="no" class="block-label">
-            <input id="no" type="radio" name="licence_type" value="no">
-            I don't have a licence yet
-        </label>
-        <label for="car" class="block-label">
-            <input id="car" type="radio" name="licence_type" value="car">
-            Car or motorcycle licence
-        </label>
-        <label for="bus" class="block-label">
-            <input id="bus" type="radio" name="licence_type" value="bus">
-            Bus, coach or lorry licence
-        </label>
-        </div>
-      </fieldset>
-    </form>
-
-    <button id="continue2" type="button" class="medium button">Finish</button>
-
-    
+              <button id="continue2" type="button" class="medium button">Finish</button>
+            </form>
         </div>    
    </div>
 </div>
