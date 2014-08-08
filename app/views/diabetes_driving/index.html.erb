@@ -82,6 +82,7 @@
     </form>
 
     <button id="continue2" type="button" class="medium button">Finish</button>
+
     
         </div>    
    </div>
@@ -92,11 +93,13 @@
         <div class="inner-block answer">
 
   <div id="dont" class="hello" style="display: none;">
-    <h2>You don’t need to tell DVLA</h2>
+    <h2 class="heading-24">You don’t need to tell DVLA</h2>
     <p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p></div>
     <div id="tell" class="hello" style="display: none;">
-        <h2>You must tell DVLA</h2>
-        <p class="notify">You must tell DVLA if you have diabetes. <a href"https://www.gov.uk/driving-medical-conditions">Tell DVLA</a> if this affects you or someone you know.</p></div>
+        <h2 class="heading-24">You must tell DVLA</h2>
+        <p class="notify">You must tell DVLA if you have diabetes. Tell DVLA if this affects you or someone you know.</p>
+        <button type="button" class="medium button">Start now</button>
+    </div>
 
 </div>
 </div>
@@ -128,53 +131,59 @@
             licenceType = $(this).val();
         });
 
+        function displayAnswer(answer) {
+            var selector = "#" + answer;
+            $(selector).show();
+            window.location.hash = answer;
+        }
+
         // decide to show the container based on the options seleted
         $("#continue2").click(function () {
             $("#hello1").hide();
             if ((licenceType === "bus") && (treatmentOption === "diet")) {
-                $('#dont').show();
+                displayAnswer('dont');
             }
             if ((licenceType === "car") && (treatmentOption === "diet")) {
-                $('#dont').show();
+                displayAnswer('dont');
             }
             if ((licenceType === "no") && (treatmentOption === "diet")) {
-                $('#dont').show();
+                displayAnswer('dont');
             }
             if ((licenceType === "bus") && (treatmentOption === "tablets")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "car") && (treatmentOption === "tablets")) {
-                $('#dont').show();
+                displayAnswer('dont');
             }
             if ((licenceType === "no") && (treatmentOption === "tablets")) {
-                $('#dont').show();
+                displayAnswer('dont');
             }
             if ((licenceType === "bus") && (treatmentOption === "insulin")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "car") && (treatmentOption === "insulin")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "no") && (treatmentOption === "insulin")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "bus") && (treatmentOption === "pump")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "car") && (treatmentOption === "pump")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "no") && (treatmentOption === "pump")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "bus") && (treatmentOption === "injection")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "car") && (treatmentOption === "injection")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             if ((licenceType === "no") && (treatmentOption === "injection")) {
-                $('#tell').show();
+                displayAnswer('tell');
             }
             return false;
         });
