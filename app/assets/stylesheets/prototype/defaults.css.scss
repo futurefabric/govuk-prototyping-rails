@@ -12,7 +12,7 @@ h1 {
 }
 
 h1 span {
-  @include core-36;
+  @include core-27;
   color: #6f777b;
   display: block;
   margin-bottom:5px;
@@ -21,6 +21,7 @@ h1 span {
 
 .govuk .heading-36 {
   margin-bottom:5px;
+  margin-top: 20px;
 }
 
 #content.multi-page li a:visited, #content.multi-page .pagination li a:visited, #wrapper.programme .article-container nav a:visited {
