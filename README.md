@@ -1,8 +1,10 @@
-User Formats prototyping tool
-=============================
+GOV.UK prototyping tool
+=======================
 
-The purpose of this app is to allow User Formats designers to prototype html layouts that can
-be linked together and published publicly for research and usability testing.
+The purpose of this app is to allow GOV.UK designers to prototype html layouts that can
+be linked together and published publicly for research and usability testing. This was
+developed primarily for User Formats designers to use, but there's no reason other
+designers couldn't use it too.
 
 It exists for the following reasons:
 
