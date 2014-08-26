@@ -94,7 +94,9 @@
     <div id="tell" class="hello" style="display: none;">
         <h2 class="heading-24">You must tell DVLA</h2>
         <p class="notify">You must tell DVLA if you have diabetes. Tell DVLA if this affects you or someone you know.</p>
-        <button type="button" class="medium button">Start now</button>
+        <form class="get-started" action="http://diabetes-dvla.herokuapp.com/drivers-number">
+          <input type="hidden" name="url" value="http://diabetes-dvla.herokuapp.com/drivers-number"><input type="submit" value="Start now" class="button medium">
+        </form>
     </div>
 
 </div>
@@ -172,13 +174,13 @@
             if ((licenceType === "no") && (treatmentOption === "pump")) {
                 displayAnswer('tell');
             }
-            if ((licenceType === "bus") && (treatmentOption === "injection")) {
+            if ((licenceType === "bus") && (treatmentOption === "injectable")) {
                 displayAnswer('tell');
             }
-            if ((licenceType === "car") && (treatmentOption === "injection")) {
+            if ((licenceType === "car") && (treatmentOption === "injectable")) {
                 displayAnswer('tell');
             }
-            if ((licenceType === "no") && (treatmentOption === "injection")) {
+            if ((licenceType === "no") && (treatmentOption === "injectable")) {
                 displayAnswer('tell');
             }
             return false;
