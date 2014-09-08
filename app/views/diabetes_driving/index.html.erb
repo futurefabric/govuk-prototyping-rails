@@ -91,6 +91,11 @@
   <div id="dont" class="hello" style="display: none;">
     <h2 class="heading-24">You don’t need to tell DVLA</h2>
     <p>You don’t need to tell DVLA unless your treatment changes to insulin or you don't feel safe when you drive.</p></div>
+
+      <div id="form" class="hello" style="display: none;">
+    <h2 class="heading-24">You must tell DVLA</h2>
+    <p>You must tell <abbr title="Driver Vehicle and Licensing Agency">DVLA</abbr>. Fill in <a href="/government/publications/vdiab1i-confidential-medical-information">form VDIAB1I</a> and send it to <abbr title="Driver Vehicle and Licensing Agency">DVLA</abbr>. The address is on the form.</p></div>
+
     <div id="tell" class="hello" style="display: none;">
         <h2 class="heading-24">You must tell DVLA</h2>
         <p class="notify">You must tell DVLA if you have diabetes. Tell DVLA if this affects you or someone you know.</p>
@@ -181,7 +186,7 @@
                 displayAnswer('tell');
             }
             if ((licenceType === "no") && (treatmentOption === "injectable")) {
-                displayAnswer('tell');
+                displayAnswer('form');
             }
             return false;
         });
