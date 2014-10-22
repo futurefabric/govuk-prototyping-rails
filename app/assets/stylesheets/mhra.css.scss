@@ -1,0 +1,61 @@
+// Place all the styles related to the mhra controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.govuk {
+
+
+  min-height:600px;
+  padding-bottom:30px;
+
+  .mhra-intro {
+    margin-top:30px;
+
+    @include media(desktop) {
+      max-width:75%;
+    }
+  }
+
+  span.heading-27 {
+    margin-bottom:5px;
+  }
+
+  .heading-24 {
+    margin-bottom:5px;
+    margin-top:30px;
+  }
+
+  h2 a {
+    text-decoration:none;
+  }
+
+  .alerts-list {
+      margin-top:30px;
+  }
+
+  .heading-48 {
+
+    margin-top: 30px;
+
+    @include media(desktop) {
+      margin-top: 65px;
+      width:75%;
+    }
+
+    margin-bottom: 0px;
+  }
+
+  .button {
+    margin-top:30px;
+    font-weight: 700;
+    font-size:24px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+  }
+
+  .block-label {
+    padding: 15px 30px 12px 45px;
+  }
+}

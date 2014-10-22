@@ -1,13 +1,18 @@
 GovukPrototypingRails::Application.routes.draw do
-  
+
+  get "mhra/interstitial"
+  get "mhra/index"
+  get "mhra/signup"
   get "examples/index"
   get "examples" => 'examples#index'
-  
+  get "drug-device-alerts/email-signup" => 'mhra#signup'
+  get "interstitial" => 'mhra#interstitial'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'examples#index'
+  root 'mhra#signup'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
