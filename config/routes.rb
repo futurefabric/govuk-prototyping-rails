@@ -1,11 +1,13 @@
 GovukPrototypingRails::Application.routes.draw do
 
+  get "mhra/signup_many"
   get "mhra/interstitial"
   get "mhra/index"
   get "mhra/signup"
   get "examples/index"
   get "examples" => 'examples#index'
   get "drug-device-alerts/email-signup" => 'mhra#signup'
+  get "cma-cases/email-signup" => 'mhra#signup_many'
   get "interstitial" => 'mhra#interstitial'
 
   # The priority is based upon order of creation: first created -> highest priority.
