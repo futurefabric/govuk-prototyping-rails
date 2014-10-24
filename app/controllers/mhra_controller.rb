@@ -1,6 +1,6 @@
 class MhraController < ApplicationController
   def index
-    @title = 'Examples'
+    @title = 'MHRA Email page prototypes'
     @has_breadcrumbs = false
     @has_related_links = false
   end
