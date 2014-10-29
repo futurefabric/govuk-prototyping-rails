@@ -10,8 +10,7 @@ GovukPrototypingRails::Application.routes.draw do
   get "mhra-subtopics/email-signup" => 'mhra#signup_many'
   get "oil-and-gas/fields-and-wells/email-signup" => 'mhra#signup_oil_gas'
   get "interstitial" => 'mhra#interstitial'
-  get "drug-device-alerts/gov-delivery" => 'mhra#gov_delivery'
-  get "drug-device-alerts/gov-delivery/" => 'mhra#gov_delivery'
+  get "gov-delivery" => 'mhra#gov_delivery'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
