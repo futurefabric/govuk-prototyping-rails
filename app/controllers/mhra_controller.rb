@@ -28,4 +28,10 @@ class MhraController < ApplicationController
     @has_breadcrumbs = false
     @has_related_links = false
   end
+
+  def gov_delivery
+    @title = 'GOV Delivery'
+    @has_breadcrumbs = false
+    @has_related_links = false
+  end
 end
