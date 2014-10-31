@@ -21,75 +21,73 @@
       <!-- <details>
         <summary>Thing</summary>
       </details> -->
-      <h2 class="heading-24">Topics alerts</h2>
-      <p>Select the topics you want to receive email alerts for.</p>
+      <p>Select the topics you need email alerts for.</p>
 
       <form accept-charset="UTF-8" action="<%= root_url %>gov-delivery/" method="get">
         <fieldset>
-          <label class="block-label" for="checkbox-1">
-            <input id="checkbox-1" type="checkbox" value="1">
+
+          <label class="block-label" for="checkbox-all">
+            <input id="checkbox-all" type="checkbox" value="1">
             All topics
           </label>
-        </fieldset>
 
-        <fieldset>
-          <label for="checkbox-1">
+          <label class="block-label inset" for="checkbox-1">
             <input id="checkbox-1" type="checkbox" value="1">
             Clinical trials
           </label>
 
-          <label for="checkbox-2">
+          <label class="block-label inset" for="checkbox-2">
             <input id="checkbox-2" type="checkbox" value="1">
             Forms and fees
           </label>
 
-          <label for="checkbox-3">
+          <label class="block-label inset" for="checkbox-3">
             <input id="checkbox-3" type="checkbox" value="1">
             Good practice and inspections
           </label>
 
-          <label for="checkbox-4">
+          <label class="block-label inset" for="checkbox-4">
             <input id="checkbox-4" type="checkbox" value="1">
             Herbal and homeopathic medicines
           </label>
 
-          <label for="checkbox-5">
+          <label class="block-label inset" for="checkbox-5">
             <input id="checkbox-5" type="checkbox" value="1">
             Innovation
           </label>
 
-          <label for="checkbox-6">
+          <label class="block-label inset" for="checkbox-6">
             <input id="checkbox-6" type="checkbox" value="1">
             Labelling and leaflets for medicines
           </label>
 
-          <label for="checkbox-7">
+          <label class="block-label inset" for="checkbox-7">
             <input id="checkbox-7" type="checkbox" value="1">
             Manufacturing, importation and exportation of medicines
           </label>
 
-          <label for="checkbox-8">
+          <label class="block-label inset" for="checkbox-8">
             <input id="checkbox-8" type="checkbox" value="1">
             Marketing authorisations, licensing and advertising
           </label>
 
-          <label for="checkbox-9">
+          <label class="block-label inset" for="checkbox-9">
             <input id="checkbox-9" type="checkbox" value="1">
             Medical devices
           </label>
 
-          <label for="checkbox-10">
+          <label class="block-label inset" for="checkbox-10">
             <input id="checkbox-10" type="checkbox" value="1">
             Safety alerts, guidance and pharmacovigilance
           </label>
 
-          <label for="checkbox-11">
+          <label class="block-label inset" for="checkbox-11">
             <input id="checkbox-11" type="checkbox" value="1">
             Safety guidance for blood and blood components
           </label>
         </fieldset>
 
-        <div class="email-notice"><p>You’ll receive notifications for new alerts and changes to existing alerts.</p></div>
+        <div class="email-notice"><p>You’ll get notifications about new alerts and changes to existing alerts.</p></div>
 
         <div style="margin:0;padding:0;display:inline;">
         <input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="KK4T3NGqcea5w+b35dR3xsQU2mDu2FAINZU/rPQPz4o=">
@@ -106,3 +104,27 @@
   </div>
 </div>
 <!-- / GRID: TWO THIRDS / ONE THIRD -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  $('#checkbox-all').click(function() {
+
+    if($(this).is(':checked')) {
+
+      $("input[type=checkbox]").each(function () {
+        $(this).prop("checked", true);
+      });
+
+    }else{
+      $("input[type=checkbox]").each(function () {
+        $(this).prop("checked", false);
+      });
+    }
+  });
+
+});
+
+</script>

@@ -12,7 +12,7 @@ class MhraController < ApplicationController
   end
 
   def signup_many
-    @title = 'Subscribe to email alerts'
+    @title = 'Email alert subscription: MHRA email alerts'
     @has_breadcrumbs = false
     @has_related_links = false
   end
