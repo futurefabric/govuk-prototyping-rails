@@ -7,6 +7,7 @@ GovukPrototypingRails::Application.routes.draw do
   get "examples/index"
   get "examples" => 'examples#index'
   get "drug-device-alerts/email-signup" => 'mhra#signup'
+  get "drug-safety-update/email-signup" => 'mhra#signup_safety'
   get "mhra-subtopics/email-signup" => 'mhra#signup_many'
   get "oil-and-gas/fields-and-wells/email-signup" => 'mhra#signup_oil_gas'
   get "interstitial" => 'mhra#interstitial'
