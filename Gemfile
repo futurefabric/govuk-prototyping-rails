@@ -18,6 +18,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'govuk_frontend_toolkit', '3.3.0'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

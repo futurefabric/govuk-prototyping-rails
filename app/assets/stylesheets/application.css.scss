@@ -1,15 +1,13 @@
 
-// govuk_frontend_toolkit
-@import "govuk_frontend_toolkit/_conditionals";
-@import "govuk_frontend_toolkit/_typography";
-@import "govuk_frontend_toolkit/_colours";
-@import "govuk_frontend_toolkit/_css3";
-
-// design patterns
-@import "design-patterns/example-grids";
-
-// elements
-@import "elements";
+// govuk_frontend_toolkit mixins
+@import "colours";
+@import "conditionals";
+@import "css3";
+@import "device-pixels";
+@import "grid_layout";
+@import "measurements";
+@import "shims";
+@import "typography";
 
 // prototype defaults
 @import "prototype/defaults";
