@@ -9,8 +9,5 @@
 @import "shims";
 @import "typography";
 
-// prototype defaults
-@import "prototype/defaults";
-
-// prototype view stylesheets
-@import "examples";
+// useful defaults for all prototypes
+@import "defaults";
