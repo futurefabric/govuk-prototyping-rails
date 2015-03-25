@@ -1,22 +1,27 @@
 GovukPrototypingRails::Application.routes.draw do
 
-  get "examples/index"
   get "policies/index"
-
-  get "policies/benefits_reform"
-  get "policies/universal_credit"
-
-  get "examples" => 'examples#index'
   get "policies" => 'policies#index'
 
+  get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'
+  get "policies/localism"
+  get "policies/localism" => 'policies#localism'
+  get "policies/railway"
+  get "policies/railway" => 'policies#railway'
+
+  get "policies/universal_credit"
   get "policies/benefits-reform/universal-credit" => 'policies#universal_credit'
+  get "policies/city_deal"
+  get "policies/localism/city-deal" => 'policies#city_deal'
+  get "policies/hs2"
+  get "policies/railway/hs2" => 'policies#hs_two'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'examples#index'
+  root 'policies#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

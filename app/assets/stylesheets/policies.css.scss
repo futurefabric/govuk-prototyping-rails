@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.related_programmes {
+.related_programmes,
+.policies_list {
 
   margin-top: 40px;
 
@@ -24,4 +25,12 @@
 .policy_area_summary,
 .programme_summary {
   margin-top:40px;
+}
+
+.policies_list {
+    margin-top:60px;
+
+    li {
+      margin:0 0 10px 0;
+    }
 }
