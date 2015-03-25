@@ -19,6 +19,7 @@ group :production do
 end
 
 gem 'govuk_frontend_toolkit', '3.3.0'
+gem 'slimmer', '7.0.0'
 
 
 # Use SCSS for stylesheets

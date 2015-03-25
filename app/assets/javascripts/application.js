@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$('footer a').each(function(i, el){
+  $(el).attr('href', 'https://www.gov.uk' + $(el).attr('href'));
+});
