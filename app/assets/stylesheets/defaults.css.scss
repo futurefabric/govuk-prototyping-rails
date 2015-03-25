@@ -16,7 +16,7 @@ main {
 
 p {
   @include core-19;
-  margin-bottom:20px;
+  //margin-bottom:20px;
   max-width:660px;
 }
 
@@ -26,4 +26,8 @@ p {
 
 #global-breadcrumb ol {
   margin:0;
+}
+
+.full-width {
+  @include grid-column( 1/1 );
 }

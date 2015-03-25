@@ -1,0 +1,35 @@
+
+<!-- POLICY AREA -->
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: 'Benefits reform' } %>
+		<%= render partial: 'govuk_component/metadata', locals: {
+		  :from => [
+				"<a href='https://www.gov.uk/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>",
+				"<a href='https://www.gov.uk/government/organisations/home-office'>Home Office</a>",
+				"<a href='https://www.gov.uk/government/people/iain-duncan-smith#current-roles'>The Rt Hon Iain Duncan Smith MP</a>"
+			],
+		  :other => {
+		    "Performance data" => "<a href='#'>Benefits reform performance</a>"
+		  }
+		} %>
+	</div>
+
+	<div class="column-third">
+		<ul class="related_programmes">
+			<li><a href="<%= root_url %>policies/policy-area/programme">Working age benefits</a></li>
+			<li><a href="<%= root_url %>policies/policy-area/programme">Housing Benefit payment</a></li>
+			<li><a href="<%= root_url %>policies/policy-area/programme">Work Capability Assessment</a></li>
+			<li><a href="<%= root_url %>policies/policy-area/programme">Jobseeker’s Allowance Claimant Commitment</a></li>
+			<li><a href="<%= root_url %>policies/policy-area/programme">The Work Programme</a></li>
+			<li><a href="<%= root_url %>policies/policy-area/programme">Universal Credit</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="grid-row">
+	<div class="policy_area_summary full-width">
+		<p>The government believes that the current benefits system is too complex, and there are insufficient incentives to encourage people on benefits to start paid work or increase their hours.</p>
+	</div>
+</div>

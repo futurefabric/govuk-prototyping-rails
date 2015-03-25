@@ -1,0 +1,25 @@
+
+<!-- PROGRAMME -->
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+	<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: 'Universal Credit' } %>
+	<%= render partial: 'govuk_component/metadata', locals: {
+	  :from => [
+			"<a href='https://www.gov.uk/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>",
+			"<a href='https://www.gov.uk/government/organisations/home-office'>Home Office</a>",
+			"<a href='https://www.gov.uk/government/people/iain-duncan-smith#current-roles'>The Rt Hon Iain Duncan Smith MP</a>"
+		],
+		:part_of => "<a href='#{root_url}policies/policy-area'>Benefits reform</a>",
+	  :other => {
+			"Performance data" => "<a href='#'>Universal credit performance</a>"
+		}
+	} %>
+	</div>
+</div>
+
+<div class="grid-row">
+	<div class="programme_summary full-width">
+		<p><a href="https://www.gov.uk/universal-credit">Universal Credit</a> brings together 6 benefits for people who are out of work or on a low income into a single payment. It's being introduced in stages, starting in October 2013. By the end of 2017 it's expected to be available across England and Wales.</p>
+	</div>
+</div>
