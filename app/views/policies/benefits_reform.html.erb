@@ -3,7 +3,7 @@
 
 <div class="grid-row">
 	<div class="column-two-thirds">
-		<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: 'Benefits reform' } %>
+		<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: @title } %>
 		<%= render partial: 'govuk_component/metadata', locals: {
 		  :from => [
 				"<a href='https://www.gov.uk/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>",
@@ -18,12 +18,12 @@
 
 	<div class="column-third">
 		<ul class="related_programmes">
-			<li><a href="<%= root_url %>policies/policy-area/programme">Working age benefits</a></li>
-			<li><a href="<%= root_url %>policies/policy-area/programme">Housing Benefit payment</a></li>
-			<li><a href="<%= root_url %>policies/policy-area/programme">Work Capability Assessment</a></li>
-			<li><a href="<%= root_url %>policies/policy-area/programme">Jobseeker’s Allowance Claimant Commitment</a></li>
-			<li><a href="<%= root_url %>policies/policy-area/programme">The Work Programme</a></li>
-			<li><a href="<%= root_url %>policies/policy-area/programme">Universal Credit</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">Working age benefits</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">Housing Benefit payment</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">Work Capability Assessment</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">Jobseeker’s Allowance Claimant Commitment</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">The Work Programme</a></li>
+			<li><a href="<%= root_url %>policies/benefits-reform/universal-credit">Universal Credit</a></li>
 		</ul>
 	</div>
 </div>

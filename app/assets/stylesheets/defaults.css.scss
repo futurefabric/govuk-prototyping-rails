@@ -20,6 +20,10 @@ p {
   max-width:660px;
 }
 
+a:visited {
+  color:$govuk-blue;
+}
+
 .inner-heading {
   margin:40px 0;
 }

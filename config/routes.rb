@@ -1,14 +1,16 @@
 GovukPrototypingRails::Application.routes.draw do
 
-  get "policies/index"
-  get "policies/policy_area"
-  get "policies/programme"
   get "examples/index"
+  get "policies/index"
+
+  get "policies/benefits_reform"
+  get "policies/universal_credit"
 
   get "examples" => 'examples#index'
   get "policies" => 'policies#index'
-  get "policies/policy-area" => 'policies#policy_area'
-  get "policies/policy-area/programme" => 'policies#programme'
+
+  get "policies/benefits-reform" => 'policies#benefits_reform'
+  get "policies/benefits-reform/universal-credit" => 'policies#universal_credit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

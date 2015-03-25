@@ -3,11 +3,11 @@ class PoliciesController < ApplicationController
     @title = "Policies"
   end
 
-  def policy_area
-    @title = "Policy area"
+  def benefits_reform
+    @title = "Benefits reform"
   end
 
-  def programme
-    @title = "Programme"
+  def universal_credit
+    @title = "Universal Credit"
   end
 end

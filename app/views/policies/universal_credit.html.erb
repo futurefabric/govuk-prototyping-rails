@@ -3,14 +3,14 @@
 
 <div class="grid-row">
 	<div class="column-two-thirds">
-	<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: 'Universal Credit' } %>
+	<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: @title } %>
 	<%= render partial: 'govuk_component/metadata', locals: {
 	  :from => [
 			"<a href='https://www.gov.uk/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>",
 			"<a href='https://www.gov.uk/government/organisations/home-office'>Home Office</a>",
 			"<a href='https://www.gov.uk/government/people/iain-duncan-smith#current-roles'>The Rt Hon Iain Duncan Smith MP</a>"
 		],
-		:part_of => "<a href='#{root_url}policies/policy-area'>Benefits reform</a>",
+		:part_of => "<a href='#{root_url}policies/benefits-reform'>Benefits reform</a>",
 	  :other => {
 			"Performance data" => "<a href='#'>Universal credit performance</a>"
 		}
