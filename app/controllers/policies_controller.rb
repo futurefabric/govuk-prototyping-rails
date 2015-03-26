@@ -44,4 +44,8 @@ class PoliciesController < ApplicationController
   def regional_growth_fund
     @title = "Regional Growth Fund"
   end
+
+  def auto_enrolment
+    @title = "Automatic enrolment in workplace pensions"
+  end
 end

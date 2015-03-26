@@ -3,9 +3,3835 @@
 
 <%= render partial: 'govuk_component/title', locals: { title: 'Policies' } %>
 
-<ul class="policies_list">
+<!-- <ul class="policies_list">
 	<li><a href="<%= root_url %>policies/benefits-reform">Benefits reform</a></li>
 	<li><a href="<%= root_url %>policies/localism">Localism</a></li>
 	<li><a href="<%= root_url %>policies/railway">Railway</a></li>
 	<li><a href="<%= root_url %>policies/employment">Employment</a></li>
+</ul> -->
+
+
+<div class="filtering">
+  <div class="filter-form">
+  <div class="inner-block">
+    <form method="get" action="/cma-cases" class="js-live-search-form">
+      <div class="filter text-filter">
+        <label class="legend" for="finder-keyword-search">Search</label>
+        <input value="" type="text" name="keywords" id="finder-keyword-search" aria-controls="js-search-results-info" class="text">
+      </div>
+      <div class="filter checkbox-filter js-openable-filter" tabindex="0">
+  <div class="head">
+    <span class="legend">Case type</span>
+    <div class="controls">
+      <a class="clear-selected js-hidden">clear</a>
+      <div class="toggle"></div>
+    </div>
+  </div>
+  <div class="checkbox-container">
+    <div class="js-auto-height-inner">
+      <label for="ca98-and-civil-cartels">
+        <input type="checkbox" name="case_type[]" value="ca98-and-civil-cartels" id="ca98-and-civil-cartels" aria-controls="js-search-results-info">
+        CA98 and civil cartels
+      </label>
+      <label for="criminal-cartels">
+        <input type="checkbox" name="case_type[]" value="criminal-cartels" id="criminal-cartels" aria-controls="js-search-results-info">
+        Criminal cartels
+      </label>
+      <label for="markets">
+        <input type="checkbox" name="case_type[]" value="markets" id="markets" aria-controls="js-search-results-info">
+        Markets
+      </label>
+      <label for="mergers">
+        <input type="checkbox" name="case_type[]" value="mergers" id="mergers" aria-controls="js-search-results-info">
+        Mergers
+      </label>
+      <label for="consumer-enforcement">
+        <input type="checkbox" name="case_type[]" value="consumer-enforcement" id="consumer-enforcement" aria-controls="js-search-results-info">
+        Consumer enforcement
+      </label>
+      <label for="regulatory-references-and-appeals">
+        <input type="checkbox" name="case_type[]" value="regulatory-references-and-appeals" id="regulatory-references-and-appeals" aria-controls="js-search-results-info">
+        Regulatory references and appeals
+      </label>
+      <label for="review-of-orders-and-undertakings">
+        <input type="checkbox" name="case_type[]" value="review-of-orders-and-undertakings" id="review-of-orders-and-undertakings" aria-controls="js-search-results-info">
+        Reviews of orders and undertakings
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+  <div class="head">
+    <span class="legend">Case state</span>
+    <div class="controls">
+      <a class="clear-selected js-hidden">clear</a>
+      <div class="toggle"></div>
+    </div>
+  </div>
+  <div class="checkbox-container">
+    <div class="js-auto-height-inner">
+      <label for="open">
+        <input type="checkbox" name="case_state[]" value="open" id="open" aria-controls="js-search-results-info">
+        Open
+      </label>
+      <label for="closed">
+        <input type="checkbox" name="case_state[]" value="closed" id="closed" aria-controls="js-search-results-info">
+        Closed
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+  <div class="head">
+    <span class="legend">Market sector</span>
+    <div class="controls">
+      <a class="clear-selected js-hidden">clear</a>
+      <div class="toggle"></div>
+    </div>
+  </div>
+  <div class="checkbox-container">
+    <div class="js-auto-height-inner">
+      <label for="aerospace">
+        <input type="checkbox" name="market_sector[]" value="aerospace" id="aerospace" aria-controls="js-search-results-info">
+        Aerospace
+      </label>
+      <label for="agriculture-environment-and-natural-resources">
+        <input type="checkbox" name="market_sector[]" value="agriculture-environment-and-natural-resources" id="agriculture-environment-and-natural-resources" aria-controls="js-search-results-info">
+        Agriculture, environment and natural resources
+      </label>
+      <label for="building-and-construction">
+        <input type="checkbox" name="market_sector[]" value="building-and-construction" id="building-and-construction" aria-controls="js-search-results-info">
+        Building and construction
+      </label>
+      <label for="chemicals">
+        <input type="checkbox" name="market_sector[]" value="chemicals" id="chemicals" aria-controls="js-search-results-info">
+        Chemicals
+      </label>
+      <label for="clothing-footwear-and-fashion">
+        <input type="checkbox" name="market_sector[]" value="clothing-footwear-and-fashion" id="clothing-footwear-and-fashion" aria-controls="js-search-results-info">
+        Clothing, footwear and fashion
+      </label>
+      <label for="communications">
+        <input type="checkbox" name="market_sector[]" value="communications" id="communications" aria-controls="js-search-results-info">
+        Communications
+      </label>
+      <label for="defence">
+        <input type="checkbox" name="market_sector[]" value="defence" id="defence" aria-controls="js-search-results-info">
+        Defence
+      </label>
+      <label for="distribution-and-service-industries">
+        <input type="checkbox" name="market_sector[]" value="distribution-and-service-industries" id="distribution-and-service-industries" aria-controls="js-search-results-info">
+        Distribution and service industries
+      </label>
+      <label for="electronics-industry">
+        <input type="checkbox" name="market_sector[]" value="electronics-industry" id="electronics-industry" aria-controls="js-search-results-info">
+        Electronics
+      </label>
+      <label for="energy">
+        <input type="checkbox" name="market_sector[]" value="energy" id="energy" aria-controls="js-search-results-info">
+        Energy
+      </label>
+      <label for="engineering">
+        <input type="checkbox" name="market_sector[]" value="engineering" id="engineering" aria-controls="js-search-results-info">
+        Engineering
+      </label>
+      <label for="financial-services">
+        <input type="checkbox" name="market_sector[]" value="financial-services" id="financial-services" aria-controls="js-search-results-info">
+        Financial services
+      </label>
+      <label for="fire-police-and-security">
+        <input type="checkbox" name="market_sector[]" value="fire-police-and-security" id="fire-police-and-security" aria-controls="js-search-results-info">
+        Fire, police and security
+      </label>
+      <label for="food-manufacturing">
+        <input type="checkbox" name="market_sector[]" value="food-manufacturing" id="food-manufacturing" aria-controls="js-search-results-info">
+        Food manufacturing
+      </label>
+      <label for="giftware-jewellery-and-tableware">
+        <input type="checkbox" name="market_sector[]" value="giftware-jewellery-and-tableware" id="giftware-jewellery-and-tableware" aria-controls="js-search-results-info">
+        Giftware, jewellery and tableware
+      </label>
+      <label for="healthcare-and-medical-equipment">
+        <input type="checkbox" name="market_sector[]" value="healthcare-and-medical-equipment" id="healthcare-and-medical-equipment" aria-controls="js-search-results-info">
+        Healthcare and medical equipment
+      </label>
+      <label for="household-goods-furniture-and-furnishings">
+        <input type="checkbox" name="market_sector[]" value="household-goods-furniture-and-furnishings" id="household-goods-furniture-and-furnishings" aria-controls="js-search-results-info">
+        Household goods, furniture and furnishings
+      </label>
+      <label for="mineral-extraction-mining-and-quarrying">
+        <input type="checkbox" name="market_sector[]" value="mineral-extraction-mining-and-quarrying" id="mineral-extraction-mining-and-quarrying" aria-controls="js-search-results-info">
+        Mineral extraction, mining and quarrying
+      </label>
+      <label for="motor-industry">
+        <input type="checkbox" name="market_sector[]" value="motor-industry" id="motor-industry" aria-controls="js-search-results-info">
+        Motor industry
+      </label>
+      <label for="oil-and-gas-refining-and-petrochemicals">
+        <input type="checkbox" name="market_sector[]" value="oil-and-gas-refining-and-petrochemicals" id="oil-and-gas-refining-and-petrochemicals" aria-controls="js-search-results-info">
+        Oil and gas refining and petrochemicals
+      </label>
+      <label for="paper-printing-and-packaging">
+        <input type="checkbox" name="market_sector[]" value="paper-printing-and-packaging" id="paper-printing-and-packaging" aria-controls="js-search-results-info">
+        Paper printing and packaging
+      </label>
+      <label for="pharmaceuticals">
+        <input type="checkbox" name="market_sector[]" value="pharmaceuticals" id="pharmaceuticals" aria-controls="js-search-results-info">
+        Pharmaceuticals
+      </label>
+      <label for="public-markets">
+        <input type="checkbox" name="market_sector[]" value="public-markets" id="public-markets" aria-controls="js-search-results-info">
+        Public markets
+      </label>
+      <label for="recreation-and-leisure">
+        <input type="checkbox" name="market_sector[]" value="recreation-and-leisure" id="recreation-and-leisure" aria-controls="js-search-results-info">
+        Recreation and leisure
+      </label>
+      <label for="retail-and-wholesale">
+        <input type="checkbox" name="market_sector[]" value="retail-and-wholesale" id="retail-and-wholesale" aria-controls="js-search-results-info">
+        Retail and wholesale
+      </label>
+      <label for="telecommunications">
+        <input type="checkbox" name="market_sector[]" value="telecommunications" id="telecommunications" aria-controls="js-search-results-info">
+        Telecommunications
+      </label>
+      <label for="textiles">
+        <input type="checkbox" name="market_sector[]" value="textiles" id="textiles" aria-controls="js-search-results-info">
+        Textiles
+      </label>
+      <label for="transport">
+        <input type="checkbox" name="market_sector[]" value="transport" id="transport" aria-controls="js-search-results-info">
+        Transport
+      </label>
+      <label for="utilities">
+        <input type="checkbox" name="market_sector[]" value="utilities" id="utilities" aria-controls="js-search-results-info">
+        Utilities
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+  <div class="head">
+    <span class="legend">Outcome</span>
+    <div class="controls">
+      <a class="clear-selected js-hidden">clear</a>
+      <div class="toggle"></div>
+    </div>
+  </div>
+  <div class="checkbox-container">
+    <div class="js-auto-height-inner">
+      <label for="ca98-no-grounds-for-action-non-infringement">
+        <input type="checkbox" name="outcome_type[]" value="ca98-no-grounds-for-action-non-infringement" id="ca98-no-grounds-for-action-non-infringement" aria-controls="js-search-results-info">
+        CA98 - no grounds for action
+      </label>
+      <label for="ca98-infringement-chapter-i">
+        <input type="checkbox" name="outcome_type[]" value="ca98-infringement-chapter-i" id="ca98-infringement-chapter-i" aria-controls="js-search-results-info">
+        CA98 - infringement Chapter I
+      </label>
+      <label for="ca98-infringement-chapter-ii">
+        <input type="checkbox" name="outcome_type[]" value="ca98-infringement-chapter-ii" id="ca98-infringement-chapter-ii" aria-controls="js-search-results-info">
+        CA98 - infringement Chapter II
+      </label>
+      <label for="ca98-administrative-priorities">
+        <input type="checkbox" name="outcome_type[]" value="ca98-administrative-priorities" id="ca98-administrative-priorities" aria-controls="js-search-results-info">
+        CA98 - administrative priorities
+      </label>
+      <label for="ca98-commitment">
+        <input type="checkbox" name="outcome_type[]" value="ca98-commitment" id="ca98-commitment" aria-controls="js-search-results-info">
+        CA98 - commitments
+      </label>
+      <label for="criminal-cartels-verdict">
+        <input type="checkbox" name="outcome_type[]" value="criminal-cartels-verdict" id="criminal-cartels-verdict" aria-controls="js-search-results-info">
+        Criminal cartels - verdict
+      </label>
+      <label for="markets-phase-1-no-enforcement-action">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-1-no-enforcement-action" id="markets-phase-1-no-enforcement-action" aria-controls="js-search-results-info">
+        Markets - phase 1 no enforcement action
+      </label>
+      <label for="markets-phase-1-undertakings-in-lieu-of-reference">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-1-undertakings-in-lieu-of-reference" id="markets-phase-1-undertakings-in-lieu-of-reference" aria-controls="js-search-results-info">
+        Markets - phase 1 undertakings in lieu of reference
+      </label>
+      <label for="markets-phase-1-referral">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-1-referral" id="markets-phase-1-referral" aria-controls="js-search-results-info">
+        Markets - phase 1 referral
+      </label>
+      <label for="mergers-phase-1-clearance">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-1-clearance" id="mergers-phase-1-clearance" aria-controls="js-search-results-info">
+        Mergers - phase 1 clearance
+      </label>
+      <label for="mergers-phase-1-clearance-with-undertakings-in-lieu">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-1-clearance-with-undertakings-in-lieu" id="mergers-phase-1-clearance-with-undertakings-in-lieu" aria-controls="js-search-results-info">
+        Mergers - phase 1 clearance with undertakings in lieu
+      </label>
+      <label for="mergers-phase-1-referral">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-1-referral" id="mergers-phase-1-referral" aria-controls="js-search-results-info">
+        Mergers - phase 1 referral
+      </label>
+      <label for="mergers-phase-1-found-not-to-qualify">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-1-found-not-to-qualify" id="mergers-phase-1-found-not-to-qualify" aria-controls="js-search-results-info">
+        Mergers - phase 1 found not to qualify
+      </label>
+      <label for="mergers-phase-1-public-interest-interventions">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-1-public-interest-interventions" id="mergers-phase-1-public-interest-interventions" aria-controls="js-search-results-info">
+        Mergers - phase 1 public interest intervention
+      </label>
+      <label for="markets-phase-2-clearance-no-adverse-effect-on-competition">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-2-clearance-no-adverse-effect-on-competition" id="markets-phase-2-clearance-no-adverse-effect-on-competition" aria-controls="js-search-results-info">
+        Markets - phase 2 clearance - no adverse effect on competition
+      </label>
+      <label for="markets-phase-2-adverse-effect-on-competition-leading-to-remedies">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-2-adverse-effect-on-competition-leading-to-remedies" id="markets-phase-2-adverse-effect-on-competition-leading-to-remedies" aria-controls="js-search-results-info">
+        Markets - phase 2 adverse effect on competition leading to remedies
+      </label>
+      <label for="markets-phase-2-decision-to-dispense-with-procedural-obligations">
+        <input type="checkbox" name="outcome_type[]" value="markets-phase-2-decision-to-dispense-with-procedural-obligations" id="markets-phase-2-decision-to-dispense-with-procedural-obligations" aria-controls="js-search-results-info">
+        Markets - phase 2 decision to dispense with procedural obligations
+      </label>
+      <label for="mergers-phase-2-clearance">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-2-clearance" id="mergers-phase-2-clearance" aria-controls="js-search-results-info">
+        Mergers - phase 2 clearance
+      </label>
+      <label for="mergers-phase-2-clearance-with-remedies">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-2-clearance-with-remedies" id="mergers-phase-2-clearance-with-remedies" aria-controls="js-search-results-info">
+        Mergers - phase 2 clearance with remedies
+      </label>
+      <label for="mergers-phase-2-prohibition">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-2-prohibition" id="mergers-phase-2-prohibition" aria-controls="js-search-results-info">
+        Mergers - phase 2 prohibition
+      </label>
+      <label for="mergers-phase-2-cancellation">
+        <input type="checkbox" name="outcome_type[]" value="mergers-phase-2-cancellation" id="mergers-phase-2-cancellation" aria-controls="js-search-results-info">
+        Mergers - phase 2 cancellation
+      </label>
+      <label for="consumer-enforcement-no-action">
+        <input type="checkbox" name="outcome_type[]" value="consumer-enforcement-no-action" id="consumer-enforcement-no-action" aria-controls="js-search-results-info">
+        Consumer enforcement - no formal action
+      </label>
+      <label for="consumer-enforcement-court-order">
+        <input type="checkbox" name="outcome_type[]" value="consumer-enforcement-court-order" id="consumer-enforcement-court-order" aria-controls="js-search-results-info">
+        Consumer enforcement - court order
+      </label>
+      <label for="consumer-enforcement-undertakings">
+        <input type="checkbox" name="outcome_type[]" value="consumer-enforcement-undertakings" id="consumer-enforcement-undertakings" aria-controls="js-search-results-info">
+        Consumer enforcement - undertakings
+      </label>
+      <label for="consumer-enforcement-changes-to-business-practices-agreed">
+        <input type="checkbox" name="outcome_type[]" value="consumer-enforcement-changes-to-business-practices-agreed" id="consumer-enforcement-changes-to-business-practices-agreed" aria-controls="js-search-results-info">
+        Consumer enforcement - changes to business practices agreed
+      </label>
+      <label for="regulatory-references-and-appeals-final-determination">
+        <input type="checkbox" name="outcome_type[]" value="regulatory-references-and-appeals-final-determination" id="regulatory-references-and-appeals-final-determination" aria-controls="js-search-results-info">
+        Regulatory references and appeals - final determination
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="filter text-filter">
+  <label class="legend" for="opened_date[from]">Opened after</label>
+  <input value="" type="text" name="opened_date[from]" id="opened_date[from]" aria-controls="js-search-results-info" aria-describedby="date-help-text" class="text">
+
+  <label class="legend" for="opened_date[to]">Opened before</label>
+  <input value="" type="text" name="opened_date[to]" id="opened_date[to]" aria-controls="js-search-results-info" class="text" aria-describedby="date-help-text">
+  <span id="date-help-text" class="help-text">For example, 2005 or 21/11/2014<span>
+</span></span>
+</div>
+
+      <input type="submit" value="Filter results" class="button js-live-search-fallback">
+    </form>
+  </div>
+</div>
+
+  <div class="js-live-search-results-block">
+    <div class="filtered-results">
+      <div aria-live="assertive" id="js-search-results-info">
+
+      </div>
+      <div id="js-results">
+        <div class="feed">
+  <span>Get updates to this list</span>
+  <a href="/cma-cases.atom">feed</a>
+</div>
+
+<ul>
+    <li class="document">
+      <h3><a href="/cma-cases/pork-farms-caspian-limited-kerry-foods-limited">Pork Farms Caspian / Kerry Foods merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-21">21 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/bristol-water-plc-price-determination">Bristol Water plc price determination</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Utilities</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals - final determination</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-04">4 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/review-of-banking-for-small-and-medium-sized-businesses-smes-in-the-uk">Retail banking market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-19">19 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/energy-market-investigation">Energy market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Energy</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-26">26 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/-reckitt-benckiser-johnson-johnson"> Reckitt Benckiser / K-Y brand merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-27">27 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/muller-uk-ireland-group-llp-dairy-crest-group-plc-merger-inquiry">Muller UK &amp; Ireland Group / Dairy Crest Group merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-20">20 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/residential-property-management-services">Residential property management services</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-01">1 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/henry-schein-uk-holdings-limited-plandent-limited">Henry Schein UK Holdings / Plandent merger inquiry </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-16">16 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/completed-acquisition-by-vodafone-limited-of-some-assets-formerly-controlled-by-phones4u-limited">Vodafone / Phones4U merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Telecommunications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-25">25 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-24">24 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/xchanging-agencyport-software-europe">Xchanging / Agencyport Software Europe merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-30">30 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/energy-price-control-appeal-british-gas-trading">Energy price control appeal: British Gas Trading</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Utilities</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-02">2 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/energy-price-control-appeal-northern-powergrid">Energy price control appeal: Northern Powergrid</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Utilities</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-02">2 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/multi-packaging-solutions-uk-limited-presentation-products-group">Multi Packaging Solutions UK / Presentation Products Group merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Paper printing and packaging</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-08">8 January 2015</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-23">23 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/competition-and-regulation-in-higher-education-in-england">Competition and regulation in higher education in England</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-20">20 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/hotel-online-booking-sector-investigation">Hotel online booking investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2010-09-10">10 September 2010</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ryanair-aer-lingus-merger-inquiry">Ryanair / Aer Lingus merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-06-15">15 June 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/key-publishing-limited-kelsey-publishing-s-aviation-and-military-history-portfolio">Key Publishing / Kelsey Publishing’s Aviation and Military History Portfolio merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-31">31 October 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-20">20 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/cucina-acquisition-uk-limited-fresh-holdings-limited">Cucina Acquisition (UK) / Fresh Holdings merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-18">18 December 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-20">20 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-property-sales-and-lettings-and-their-advertising">Property sales and lettings investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-18">18 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/private-motor-insurance-market-investigation">Private motor insurance market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 2 adverse effect on competition leading to remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-09-28">28 September 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-18">18 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/healthcare-environmental-group-limited-g-w-butler-limited">Healthcare Environmental Services / G.W. Butler merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Agriculture, environment and natural resources</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-26">26 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/bt-ee-merger-inquiry">BT Group / EE merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Telecommunications</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-04">4 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/sonoco-products-company-weidenhammer-packaging-group-gmbh">Sonoco Products Company / Weidenhammer Packaging Group merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Paper printing and packaging</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-06">6 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/criminal-investigation-into-the-supply-of-galvanised-steel-tanks-for-water-storage"> Supply of galvanised steel tanks for water storage: criminal investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Criminal cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-27">27 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/crawford-company-adjusters-uk-limited-gab-robins-holdings-uk-limited">Crawford &amp; Company Adjusters (UK) / GAB Robins Holdings UK merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-09">9 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/secondary-ticketing-websites">Secondary ticketing websites</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement - undertakings</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-26">26 July 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-05">5 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/-allflex-holding-france-alfred-cox-merger-inquiry"> Allflex / Cox Agri merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Agriculture, environment and natural resources</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-09">9 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/private-healthcare-market-investigation">Private healthcare market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 2 adverse effect on competition leading to remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-04-04">4 April 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/intercity-railways-limited-intercity-east-coast-franchise">Inter City Railways / InterCity East Coast franchise merger inquiry </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-10">10 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ashford-st-peter-s-nhs-foundation-trust-royal-surrey-county-nhs-foundation-trust">Ashford St Peter’s NHS Foundation Trust / Royal Surrey County NHS Foundation Trust merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-19">19 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/consumer-protection-review-of-higher-education">Higher education: consumer protection review</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-20">20 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/greene-king-spirit-pub-company-merger-inquiry">Greene King / Spirit Pub Company merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-11">11 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ticketmaster-europe-holdco-limited-seatwave">Ticketmaster Europe Holdco / Seatwave merger inquiry </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-10">10 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/marlowe-holdings-investments-limited-lockwell-electrical-distributors-limited">Marlowe Holdings Investments / Lockwell Electrical Distributors merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-03">3 November 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-09">9 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/perrigo-company-plc-omega-pharma-invest-nv">Perrigo Company / Omega Pharma Invest merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-13">13 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/passenger-rail-services-competition-policy-project">Passenger rail services: competition policy project</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-22">22 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/cvc-capital-partners-sicav-fis-s-a-sky-bet">CVC Capital Partners / Sky Bet merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-16">16 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/solera-holdings-cap-automotive">Solera Holdings / CAP Automotive merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Motor industry</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-05">5 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/esure-group-plc-gocompare-com-holdings-limited">esure Group / Gocompare.com Holdings merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-05">5 January 2015</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-03-02">2 March 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/steris-corporation-synergy-health-plc">STERIS Corporation / Synergy Health merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-16">16 December 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-26">26 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/breedon-aggregates-aggregate-industries-uk-merger-inquiry">Breedon Aggregates / Aggregate Industries UK merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance with remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-24">24 September 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-25">25 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/online-reviews-and-endorsements">Online reviews and endorsements</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-26">26 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/payday-lending-market-investigation">Payday lending market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 2 adverse effect on competition leading to remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-27">27 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/motor-fuels-group-murco-petroleum-limited">Motor Fuel / Murco Petroleum merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Oil and gas refining and petrochemicals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance with undertakings in lieu</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-30">30 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/atlantic-sfdt-sa-woolamai-holdings-jersey-limited">Atlantic SFDT / Woolamai Holdings Jersey merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Household goods, furniture and furnishings</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-27">27 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/forfarmers-uk-countrywide-merger-inquiry">Forfarmers UK / Countrywide Farmers merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Agriculture, environment and natural resources</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-03">3 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/willis-group-holdings-miller-insurance-services-merger-inquiry">Willis Group Holdings / Miller Insurance Services merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-19">19 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/zoll-circulation-philips-innercool-temperature-management-business">ZOLL Circulation / Philips' InnerCool temperature management business merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-08">8 January 2015</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-16">16 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/cineworld-city-screen-merger-inquiry">Cineworld / City Screen merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance with remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-04-13">13 April 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-16">16 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/wd-40-company-limited-gt-85-limited">WD-40 Company / GT 85 merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-15">15 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-16">16 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/commercial-catering-sector-investigation-into-anti-competitive-practices">Commercial catering equipment sector: investigation into anti-competitive practices</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-28">28 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/bathroom-fittings-sector-investigation-into-anti-competitive-practices">Bathroom fittings sector: investigation into anti-competitive practices</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-28">28 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/didix-international-b-v-taste-marketing-ltd">Didix International / Taste Marketing merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-31">31 October 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-12">12 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/commercial-use-of-consumer-data">Commercial use of consumer data</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-27">27 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/poundland-99p-stores-merger-inquiry">Poundland / 99p Stores merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-10">10 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/roanza-limited-enza-group-limited-robert-smith-group-limited">Roanza / Enza Group and Robert Smith Group merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-16">16 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-10">10 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/-enviva-holdings-lp-green-circle-bio-energy-inc"> Enviva Holdings / Green Circle Bio Energy merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Energy</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-29">29 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/gtcr-uk-gorkana">GTCR UK / Gorkana merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-18">18 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/mtr-corporation-crossrail-limited-crossrail">MTR Corporation (Crossrail) / Crossrail merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-18">18 November 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-28">28 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/xchanging-holdings-limited-total-objects-limited">Xchanging Holdings / Total Objects merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-16">16 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-15">15 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/chelsea-and-westminster-hospital-nhs-foundation-trust-west-middlesex-university-hospital-nhs-trust">Chelsea and Westminster Hospital NHS Foundation Trust / West Middlesex University Hospital NHS Trust merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-24">24 October 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-19">19 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/coopervision-uk-holdings-limited-sauflon-pharmaceuticals-limited">Coopervision (UK) Holdings / Sauflon Pharmaceuticals merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-19">19 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-16">16 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/lincolnshire-co-op-budgens-holbeach">Lincolnshire Co-op / Budgens (Holbeach) merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-06">6 November 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-12">12 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/eurotunnel-seafrance-merger-inquiry">Eurotunnel / SeaFrance merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 prohibition</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-10-29">29 October 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/london-stock-exchange-frank-russell">London Stock Exchange / Frank Russell merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-15">15 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-09">9 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/immediate-media-company-bristol-limited-future-publishing-limited">Immediate Media Company Bristol / Future Publishing merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance with undertakings in lieu</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-21">21 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/coca-cola-company-tccc-monster-beverages-cooperation-monster">The Coca-Cola Company / Monster Beverages Corporation merger inquiry </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-05">5 December 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-01-06">6 January 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/marston-holdings-ltd-collectica-limited">Marston Holdings / Collectica merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-13">13 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-23">23 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/asda-stores-limited-co-operative-group-limited-5-stores">Asda Stores / Co-operative Group (5 stores) merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-06">6 October 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-22">22 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/information-resources-inc-aztec-group">Information Resources Inc. / Aztec Group merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-04">4 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-19">19 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/conduct-in-the-healthcare-sector">Conduct in the healthcare sector</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-17">17 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/aggregates-cement-and-ready-mix-concrete-market-investigation">Aggregates, cement and ready-mix concrete market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 2 adverse effect on competition leading to remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-01-18">18 January 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/review-of-ims-health-undertakings">Review of IMS Health undertakings</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Reviews of orders and undertakings</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-01-01">1 January 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-26">26 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/igas-energy-plc-dart-energy-limited">IGas Energy / Dart Energy merger inquiry </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Energy</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-22">22 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-04">4 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/lhoist-steetley-dolomite">Lhoist / Steetley Dolomite merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Mineral extraction, mining and quarrying</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-05">5 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-04">4 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/enterprise-rent-a-car-uk-limited-vulcan-holdco-limited">Enterprise Rent-A-Car UK / Vulcan Holdco merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Motor industry</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-11">11 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-03">3 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-the-supply-of-healthcare-products">Supply of care home medicines: market-sharing agreement</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">CA98 - infringement Chapter I</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-03-01">1 March 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-20">20 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/prostraken-group-plc-archimedes-pharma-limited">ProStrakan Group / Archimedes Pharma merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-06">6 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-01">1 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/itv-variation-of-undertakings">ITV variation of undertakings</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Reviews of orders and undertakings</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-12">12 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-27">27 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-conduct-in-the-pharmaceutical-sector">Conduct in the pharmaceutical sector investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-24">24 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/keolis-amey-docklands-limited-docklands-light-railway-franchise">Keolis Amey Docklands / Docklands Light Railway Franchise merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-10">10 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-27">27 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/barclays-plc-the-logic-group">Barclays Bank / The Logic Group Holdings merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-17">17 October 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-24">24 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/werner-youngman">Werner / Youngman merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-28">28 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-19">19 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/grahams-the-family-dairy-limited-quothquan-farms-limited">Graham's The Family Dairy / Quothquan Farms merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-15">15 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-17">17 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/eden-gm-riders-garages">Eden (GM) / Riders Garages merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-04">4 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-17">17 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/endless-llp-office2office-plc">Endless / Office2Office merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-26">26 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-14">14 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ericsson-creative-merger-inquiry">Ericsson / Creative merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Telecommunications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-13">13 September 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-27">27 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/aecom-urs">AECOM / URS</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Engineering</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-14">14 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-12">12 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/sme-banking-undertakings-review">SME banking undertakings review</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Reviews of orders and undertakings</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-06">6 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/vitec-investments-limited-autocue-group-limited">Vitec Investments Limited / Autocue Group Limited</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-04">4 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-10">10 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/oft-cc-cases">OFT / CC closed cases</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2001-10-01">1 October 2001</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/anticipated-acquisition-by-cirrus-logic-inc-of-wolfson-microelectronics-plc">Cirrus Logic Inc / Wolfson Microelectronics plc</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-17">17 June 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-07">7 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/govia-thameslink-railway-limited-thameslink-southern-and-great-northern-rail-franchise">Govia Thameslink Railway Limited / Thameslink, Southern and Great Northern rail franchise </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-05">5 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-07">7 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/national-express-group-essex-thameside-rail-franchise">National Express  Group / Essex Thameside Rail Franchise</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-19">19 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-04">4 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/continental-veyance">Continental / Veyance</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Motor industry</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-04">4 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-11-05">5 November 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-interchange-fees-mastercard-visa-mifs">Interchange fees - Mastercard and Visa</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2004-05-01">1 May 2004</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/noble-egg-innovations-unlimited-manton-and-manton-2-limited">Noble Egg Innovations Unlimited / Manton and Manton 2 Limited</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-09">9 May 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-31">31 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/diageo-united-spirits">Diageo / United Spirits</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance with undertakings in lieu</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-30">30 September 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-31">31 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-agreements-in-the-mobility-aids-sector">Mobility aids sector: investigation into anti-competitive agreements </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">CA98 - infringement Chapter I</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-04-01">1 April 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-30">30 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-agreements-in-the-pharmaceutical-sector">Investigation into agreements in the pharmaceutical sector</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-08-11">11 August 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/associated-british-foods-plc-dorset-cereals-limited">Associated British Foods Plc / Dorset Cereals Limited</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Food manufacturing</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-08">8 August 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-28">28 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/greater-manchester-buses-south-limited-jp-executive-travel">Greater Manchester Buses South Limited / JP Executive Travel</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-29">29 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-17">17 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/spire-healthcare-limited-st-anthony-s-hospital">Spire Healthcare Limited / St Anthony’s Hospital </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-23">23 May 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-17">17 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/phonak-comfort-audio">Phonak / Comfort Audio</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-22">22 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-16">16 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/japan-tobacco-international-e-lites">Japan Tobacco International / E-Lites</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-11">11 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-15">15 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ballyclare-lhd-uk">Ballyclare/LHD (UK)</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Clothing, footwear and fashion</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-13">13 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-14">14 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/serco-group-plc-caledonian-sleeper-rail-franchise">Serco Group plc / Caledonian Sleeper rail franchise </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-01">1 September 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-10-13">13 October 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/prosecution-of-a-number-of-individuals-involved-in-an-alleged-unlawful-pyramid-scheme">Prosecution of a number of individuals involved in an alleged unlawful pyramid scheme</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2009-01-22">22 January 2009</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/-prosecution-for-suspected-fraud-in-property-sales">Prosecution for suspected fraud in property sales</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-09-12">12 September 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/statutory-audit-services-market-investigation">Statutory audit services market investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 2 adverse effect on competition leading to remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-10-21">21 October 2011</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-26">26 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/stepstone-uk-holding-limited-evenbase-recruitment-limited">StepStone UK Holding Limited / Evenbase Recruitment Limited</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-14">14 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-30">30 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/regulatory-references-and-appeals-cases-before-1-april-2014">Regulatory references and appeals cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2006-04-01">1 April 2006</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/markets-cases-before-1-april-2014">Markets cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2001-10-01">1 October 2001</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/merger-cases-before-1-april-2014">Merger cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2003-01-01">1 January 2003</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/reviews-of-orders-and-undertakings-cases-before-1-april-2014">Reviews of orders and undertakings cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Reviews of orders and undertakings</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-11-01">1 November 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/criminal-cartels-cases-before-1-april-2014">Criminal cartels cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Criminal cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2007-05-01">1 May 2007</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ca98-and-cartels-cases-before-1-april-2014">CA98 and cartels cases before 1 April 2014</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2003-03-01">1 March 2003</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/open-text-gxss">Open Text / GXS merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-12">12 February 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/anticipated-acquisition-by-homair-vacances-sa-of-eurocamp-limited">Homair Vacances / Eurocamp merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-09">9 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-15">15 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/pure-gym-the-gym">Pure Gym / The Gym</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-18">18 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-01">1 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/joint-venture-between-basildon-and-thurrock-university-hospitals-nhs-foundation-trust-southend-university-hospital-nhs-foundation-trust-and-and-integrated-pathology-partnerships-limtied">Joint venture between Basildon and Thurrock University Hospitals and Southend University Hospital NHS Foundation Trusts and Integrated Pathology Partnerships</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-02">2 July 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-10">10 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-the-supply-of-vehicle-service-maintenance-and-repair-platforms-in-the-uk">Vehicle service, maintenance and repair platforms investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">CA98 - commitments</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-06-17">17 June 2011</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-09">9 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/wolseley-fusion">Wolseley / Fusion</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-01">1 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-09-08">8 September 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/llu-wlr-charge-control-review-2012-appeals">LLU / WLR Charge Control Review 2012 Appeals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-24">24 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigations-into-the-use-of-misleading-reference-pricing-by-certain-furniture-and-carpet-businesses">Investigations into the use of misleading reference pricing by certain furniture and carpet businesses</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-04-01">1 April 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-21">21 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-the-supply-of-pharmaceutical-products">Supply of pharmaceutical products investigation </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-05-01">1 May 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/akzo-nobel-n-v-metlac-holding-s-r-l-merger-inquiry">Akzo Nobel / Metlac Holding merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Chemicals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 prohibition</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-05-12">12 May 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/one51-plastics-holdings-limited-straight-plc">One51 Plastics Holdings Limited / Straight plc</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Household goods, furniture and furnishings</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-02">2 June 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-18">18 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/alliance-medical-iba-molecular">Alliance Medical / IBA Molecular</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-01">1 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-15">15 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-the-distribution-of-road-fuels-in-parts-of-scotland">Distribution of road fuels in parts of Scotland</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">CA98 - commitments</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-01-18">18 January 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-24">24 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/omnicell-surgichem">Omnicell / SurgiChem</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-15">15 January 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-08">8 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/completed-acquisition-by-oasis-dental-care-central-limited-of-jdh-holdings-limited-smiles">Oasis Dental Care (Central) Limited / JDH Holdings Limited (Smiles)</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-19">19 May 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-07">7 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/criminal-investigation-into-the-supply-of-products-to-the-construction-industry">Supply of products to the construction industry: criminal investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Criminal cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-03-12">12 March 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/wgsn-stylesight">WGSN / Stylesight</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Clothing, footwear and fashion</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-24">24 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-18">18 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/fn-herstal-sa-manroy-plc">FN Herstal S.A. / Manroy PLC</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Defence</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-06">6 May 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-17">17 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/completed-acquisition-by-oasis-dental-care-central-limited-of-apex-holding-limited">Oasis Dental Care (Central) Limited / Apex Holding Limited </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-19">19 May 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-14">14 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/investigation-into-the-supply-of-galvanised-steel-tanks-for-water-storage">Supply of galvanised steel tanks for water storage: civil investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-27">27 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/anglo-american-plc-lafarge-s-a-merger-inquiry">Anglo American PLC / Lafarge S.A. merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 prohibition</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-09-11">11 September 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/children-s-online-games">Children's online games</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Consumer enforcement</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Recreation and leisure</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-04-01">1 April 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/graphic-packaging-international-benson-box-holdings">Graphic Packaging International / Benson Box Holdings</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Paper printing and packaging</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-11">11 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-03">3 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/micronclean-fenland-laundries-guardline-technology">Micronclean / Fenland Laundries / Guardline Technology</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-01">1 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/bank-of-montreal-f-c-asset-management">Bank of Montreal / F&amp;C Asset Management</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-21">21 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-19">19 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/completed-acquisition-by-iress-uk-holdings-of-avelo-fs-holdings-limited">Completed acquisition by IRESS UK Holdings of Avelo FS Holdings Limited</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Financial services</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-11-19">19 November 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-05">5 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/interserve-initial-facilities">Interserve / Initial Facilities</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Distribution and service industries</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-09">9 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/smith-nephew-arthrocare-corporation">Smith &amp; Nephew / ArthroCare Corporation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-24">24 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-10">10 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/care-monitoring-and-management-panztel">Care Monitoring &amp; Management / Panztel </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-22">22 January 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-17">17 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/edmundson-electrical-western-electrical">Edmundson Electrical / Western Electrical</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Electronics</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-18">18 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-13">13 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/joint-review-of-competition-in-the-energy-market">Joint review of competition in the energy market</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Energy</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Markets - phase 1 referral</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-19">19 December 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-26">26 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/stagecoach-norfolk-green">Stagecoach/Norfolk Green</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-31">31 January 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-07">7 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/cala-banner">CALA / BANNER</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-27">27 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/asda-co-op-clacton-on-sea">Asda / Co-op (Clacton on Sea)</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-07">7 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-20">20 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/sports-bras-rpm-investigation">Sports bras RPM investigation</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">CA98 and civil cartels</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Clothing, footwear and fashion</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">CA98 - no grounds for action</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-04-01">1 April 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-13">13 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/shire-viropharma">Shire / Viropharma</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Pharmaceuticals</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-06">6 December 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-08">8 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/heatherwood-and-wexham-park-hospitals-nhs-foundation-trust-frimley-park-hospital-nhs-foundation-trust">Heatherwood and Wexham Park Hospitals NHS Foundation Trust / Frimley Park Hospital NHS Foundation Trust </a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-31">31 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-03">3 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/arriva-passenger-services-centrebus-holdings">Arriva Passenger Services / Centrebus Holdings</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-04">4 October 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-29">29 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/short-term-consumer-car-hire-across-the-european-union-eu">Short-term consumer car hire across the European Union (EU)</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Transport</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-03">3 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/lagan-quinn">Lagan / Quinn</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-13">13 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-11">11 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/lafarge-tarmac-holdings-tarmac-buliding-products">Lafarge Tarmac Holdings / Tarmac Building Products</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Building and construction</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-04">4 February 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-16">16 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/transforming-pathology-partnership-joint-venture">Transforming pathology partnership joint venture</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Healthcare and medical equipment</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-07">7 March 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-09">9 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/northern-ireland-electricity-price-determination">Northern Ireland Electricity price determination</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Open</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Energy</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-04-30">30 April 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/tradebe-sita-merger-inquiry">Tradebe-Sita merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Agriculture, environment and natural resources</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-29">29 October 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-14">14 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/global-radio-gmg-merger-inquiry">Global Radio / GMG merger inquiry</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Communications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 2 clearance with remedies</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-10-11">11 October 2012</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-05-22">22 May 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/ridgeway-parkview-skoda">Ridgeway / Parkview Skoda</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-11-20">20 November 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-21">21 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/verizon-vodafone-appeal">Verizon / Vodafone Appeal</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Telecommunications</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Regulatory references and appeals - final determination</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-07-22">22 July 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-20">20 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/asda-budgens-soham">Asda / Budgens (Soham)</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Mergers</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Retail and wholesale</dd>
+
+            <dt class="metadata-text-label">Outcome type:</dt>
+            <dd class="metadata-text-value">Mergers - phase 1 found not to qualify</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-07">7 April 2014</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-05-14">14 May 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/cma-cases/higher-education-sector-call-for-information">Higher education sector call for information</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Case type:</dt>
+            <dd class="metadata-text-value">Markets</dd>
+
+            <dt class="metadata-text-label">Case state:</dt>
+            <dd class="metadata-text-value">Closed</dd>
+
+            <dt class="metadata-text-label">Market sector:</dt>
+            <dd class="metadata-text-value">Public markets</dd>
+
+
+            <dt class="metadata-date-label">Opened:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-22">22 October 2013</time></dd>
+
+            <dt class="metadata-date-label">Closed:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-14">14 March 2014</time></dd>
+      </dl>
+    </li>
 </ul>
+
+      </div>
+    </div>
+  </div>
+</div>

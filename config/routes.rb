@@ -1,9 +1,10 @@
 GovukPrototypingRails::Application.routes.draw do
-
+  # policies
   get "policies/index"
   get "policies" => 'policies#index'
   get "government/policies" => 'policies#index'
 
+  # policy areas
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'
   get "government/policies/benefits-reform" => 'policies#benefits_reform'
@@ -17,10 +18,13 @@ GovukPrototypingRails::Application.routes.draw do
   get "policies/employment" => 'policies#employment'
   get "government/policies/employment" => 'policies#employment'
 
+  # programmes
   get "policies/benefits-reform/universal-credit" => 'policies#universal_credit'
   get "policies/localism/city-deal" => 'policies#city_deal'
   get "policies/railway/hs2" => 'policies#hs_two'
   get "policies/employment/regional-growth-fund" => 'policies#regional_growth_fund'
+  get "policies/employment/automatic-enrolment-in-workplace-pensions" => 'policies#auto_enrolment'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
