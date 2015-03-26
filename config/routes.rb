@@ -2,23 +2,24 @@ GovukPrototypingRails::Application.routes.draw do
 
   get "policies/index"
   get "policies" => 'policies#index'
+  get "government/policies" => 'policies#index'
 
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'
+  get "government/policies/benefits-reform" => 'policies#benefits_reform'
   get "policies/localism"
   get "policies/localism" => 'policies#localism'
+  get "government/policies/localism" => 'policies#localism'
   get "policies/railway"
   get "policies/railway" => 'policies#railway'
+  get "government/policies/railway" => 'policies#railway'
   get "policies/employment"
   get "policies/employment" => 'policies#employment'
+  get "government/policies/employment" => 'policies#employment'
 
-  get "policies/universal_credit"
   get "policies/benefits-reform/universal-credit" => 'policies#universal_credit'
-  get "policies/city_deal"
   get "policies/localism/city-deal" => 'policies#city_deal'
-  get "policies/hs2"
   get "policies/railway/hs2" => 'policies#hs_two'
-  # get "policies/regional-growth-fund"
   get "policies/employment/regional-growth-fund" => 'policies#regional_growth_fund'
 
   # The priority is based upon order of creation: first created -> highest priority.
