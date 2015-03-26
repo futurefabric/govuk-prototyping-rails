@@ -3,6 +3,7 @@
 <head>
 
   <title><%= raw(@title) %> - GOV.UK</title>
+  <link rel="stylesheet" media="screen" href="https://assets.digital.cabinet-office.gov.uk/finder-frontend/application-3ac634faf30f677a5b1e8779ebc1c57e.css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -26,11 +27,12 @@
   </ul>
 </nav>
 
-<main id="content" role="main">
+<main id="content" role="main" class="finder-frontend-content">
 
 <%= yield %>
 
 </main>
 </div>
+<script src="https://assets.digital.cabinet-office.gov.uk/finder-frontend/application-2a734bdd996689c48b49eb63e590fa54.js"></script>
 </body>
 </html>

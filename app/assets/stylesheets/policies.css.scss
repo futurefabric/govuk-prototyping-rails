@@ -34,3 +34,16 @@
       margin:0 0 10px 0;
     }
 }
+
+#finder-frontend header {
+  margin: 0;
+
+  .email-link {
+    margin-bottom: 30px;
+  }
+}
+
+.with-separator {
+  margin-top:25px;
+  border-top:1px solid $grey-2;
+}
