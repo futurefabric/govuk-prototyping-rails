@@ -22,6 +22,10 @@ class PoliciesController < ApplicationController
     @title = "Railway"
   end
 
+  def employment
+    @title = "Employment"
+  end
+
 
   # Programmes
 
@@ -35,5 +39,9 @@ class PoliciesController < ApplicationController
 
   def hs_two
     @title = "HS2: high speed rail"
+  end
+
+  def regional_growth_fund
+    @title = "Regional Growth Fund"
   end
 end
