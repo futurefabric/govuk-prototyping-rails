@@ -29,10 +29,6 @@
   }
 }
 
-a:focus {
-  background-color:none;
-}
-
 .policy_area_summary,
 .programme_summary {
   margin-top:40px;
@@ -87,7 +83,7 @@ a:focus {
 }
 
 
-.view-all {
+a.view-all {
   border-radius: 3px;
   background: #dee0e2;
   clear: both;
@@ -103,6 +99,10 @@ a:focus {
     padding-left: 5px;
     vertical-align: middle;
     content: " \25B2";
+  }
+
+  &:focus {
+    background-color:none;
   }
 }
 
