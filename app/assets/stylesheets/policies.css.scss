@@ -23,9 +23,10 @@
 }
 
 .related_programmes {
-  //position:absolute;
-  //bottom:0;
-  margin-top:190px;
+
+  @include media(desktop) {
+    margin-top:190px;
+  }
 }
 
 a:focus {
