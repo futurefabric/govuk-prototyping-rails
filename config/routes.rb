@@ -5,6 +5,9 @@ GovukPrototypingRails::Application.routes.draw do
   get "government/policies" => 'policies#index'
 
   # policy areas
+  get "policies/policy_area"
+  get "policies/policy-area" => 'policies#policy_area'
+
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'
   get "government/policies/benefits-reform" => 'policies#benefits_reform'

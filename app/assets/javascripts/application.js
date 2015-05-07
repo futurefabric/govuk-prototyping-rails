@@ -18,3 +18,16 @@
 $('footer a').each(function(i, el){
   $(el).attr('href', 'https://www.gov.uk' + $(el).attr('href'));
 });
+
+var init_summary = function() {
+  $('.js-undisclosed').hide();
+  $('.summary').show();
+
+  $('.view-all').click(function(e) {
+    e.preventDefault();
+    $('.js-undisclosed').toggle();
+    $('.summary').toggleClass('js-hiding-children');
+  });
+}
+
+init_summary();

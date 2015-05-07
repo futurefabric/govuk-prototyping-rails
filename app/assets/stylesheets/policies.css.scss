@@ -5,10 +5,10 @@
 .related_programmes,
 .policies_list {
 
-  margin-top: 40px;
+  margin-top: $gutter;
 
   @include media(desktop) {
-    margin-top: -10px;
+    //margin-top: -10px;
   }
 
   li {
@@ -20,6 +20,16 @@
   a {
     text-decoration:none;
   }
+}
+
+.related_programmes {
+  //position:absolute;
+  //bottom:0;
+  margin-top:190px;
+}
+
+a:focus {
+  background-color:none;
 }
 
 .policy_area_summary,
@@ -46,4 +56,395 @@
 .with-separator {
   margin-top:25px;
   border-top:1px solid $grey-2;
+}
+
+.summary {
+  display:none;
+  margin-top: $gutter;
+  @include core-19;
+
+  p {
+    padding-right:$gutter;
+  }
+
+  .filtered-results {
+    float: none;
+    width: 100%;
+    padding:0;
+
+    ul {
+      margin:0;
+      padding:0;
+
+      li {
+        &:last-child {
+          border:none;
+        }
+      }
+    }
+  }
+}
+
+
+.view-all {
+  border-radius: 3px;
+  background: #dee0e2;
+  clear: both;
+  padding: 2px 5px;
+  margin: 3px 15px 10px 0;
+  @include core-16;
+  text-decoration:none;
+
+  &:after {
+    display: inline-block;
+    font-size: 8px;
+    height: 8px;
+    padding-left: 5px;
+    vertical-align: middle;
+    content: " \25B2";
+  }
+}
+
+.js-hiding-children {
+  .view-all {
+    border-radius: 3px;
+    background: #dee0e2;
+    clear: both;
+    padding: 2px 5px;
+    margin: 3px 15px 10px 0;
+    @include core-16;
+    text-decoration:none;
+
+    &:after {
+      display: inline-block;
+      font-size: 8px;
+      height: 8px;
+      padding-left: 5px;
+      vertical-align: middle;
+      content: " \25BC";
+    }
+  }
+}
+
+.js-undisclosed {
+  margin-top: $gutter;
+}
+
+hr {
+  display:block;
+  height:1px;
+  line-height:1px;
+  border:none;
+  border-top: 1px solid $border-colour;
+  margin-top:$gutter;
+}
+/*
+copied from finders
+*/
+
+.filtering {
+  margin-top:$gutter;
+  @extend %grid-row;
+}
+
+.filter-form {
+  @include grid-column(1/3);
+}
+.filtered-results {
+  @include grid-column(2/3);
+}
+
+.filter-form {
+
+  .js-enabled & .button {
+    display:none;
+  }
+  p {
+    max-width: $full-width;
+    @include core-16;
+    margin-bottom: $gutter;
+  }
+}
+
+.help-text {
+  @include core-14;
+  display:block;
+  padding: $gutter-one-third/2 0;
+  @include media(tablet) {
+    padding: $gutter-one-third 0;
+  }
+}
+
+.filter {
+  margin-bottom: $gutter;
+  background-color:$grey-3;
+  padding: 0 5px;
+
+  &:focus {
+    outline: 3px solid #ffbf47;
+  }
+
+  .legend {
+    @include core-19;
+    @include inline-block;
+    margin-right:40px;
+    font-weight:bold;
+    padding-top: $gutter-one-third;
+  }
+}
+.radio-filter,
+.text-filter {
+  padding: 0 $gutter-one-third;
+
+  label {
+    margin-right:$gutter-one-third;
+    @include inline-block;
+  }
+}
+.radio-filter input {
+  width:14px;
+}
+
+.checkbox-filter {
+  padding-bottom: 5px;
+  &:hover {
+    background-color:$grey-2;
+  }
+
+
+  /* Redefine scrollbars so they are always visible in scrolling checkbox lists */
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+
+  .head {
+    @extend %contain-floats;
+    padding: 0 5px;
+    position:relative;
+
+    .controls {
+      position:absolute;
+      right:5px;
+      top:10px;
+      .clear-selected {
+        @include inline-block;
+        margin-right: 5px;
+
+        &.js-hidden {
+          left: -9999em;
+          position: relative;
+          height:0px;
+          overflow:hidden;
+        }
+      }
+    }
+  }
+  .checkbox-container {
+    position:relative;
+    margin-top: 5px;
+    background-color: $white;
+    height:200px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+    ul {
+      margin:0;
+      padding:0;
+      list-style:none;
+      ul {
+        padding-left: $gutter-two-thirds;
+      }
+    }
+    label {
+      @include inline-block;
+      padding: 9px 0 5px 30px;
+      width: 90%;
+      border-bottom: 1px solid $border-colour;
+
+      &:hover {
+        background-color: $grey-4;
+      }
+    }
+    /* IE6 doesn't support psuedo selectors so scoping to checkbox-container instead of using a psuedo selector */
+    input {
+      margin-left: -23px;
+      vertical-align: top;
+      position:absolute;
+    }
+
+  }
+}
+
+.form {
+  @include core-19;
+  @include media(tablet) {
+    max-width: $two-thirds;
+  }
+
+  input.button[type=submit] {
+    margin-top: $gutter-one-third;
+  }
+
+  p {
+    max-width: $full-width;
+  }
+
+  fieldset.invalid {
+    border-left: solid 4px $error-colour;
+    padding-left: $gutter-half;
+    margin-left: -$gutter-half - 4;
+  }
+
+  .validation-message {
+    color: $error-colour;
+    font-weight: bold;
+    padding: $gutter-half;
+    margin-left: -$gutter-half - 4;
+    border-left: solid 4px $error-colour;
+  }
+
+  .block-label {
+    display: block;
+    clear: left;
+    position: relative;
+    background: $panel-colour;
+    border: 1px solid $panel-colour;
+    padding: 18px $gutter $gutter-half 45px;
+    margin: 5px 0;
+    cursor: pointer;
+
+    @include media(tablet) {
+      float: left;
+    }
+
+    input.checkbox {
+      position: absolute;
+      top: $gutter-two-thirds;
+      left: $gutter-half;
+      cursor: pointer;
+      width: 14px;
+    }
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &.selected {
+      background: $white;
+      border-color: $black;
+    }
+
+    &.focused {
+      outline: 3px solid $yellow;
+
+      input[type=checkbox]:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+input.text {
+  @include core-16;
+  background: $white;
+  border: 1px solid $border-colour;
+  width: $full-width;
+  margin: 0 0 0 -1px;
+  padding: 5px 0;
+  margin-bottom: $gutter-one-third;
+  text-indent: 5px;
+}
+
+.button {
+  //@include button($button-colour);
+  width: auto;
+  @include bold-24;
+}
+
+.filtered-results {
+  .result-info {
+    @include core-16;
+    vertical-align: baseline;
+    border-bottom: solid 1px $border-colour;
+    margin: 0 0 $gutter-half 0;
+    padding-bottom: $gutter-half;
+
+    .result-count {
+      @include bold-48;
+      margin-right: $gutter-one-third / 2;
+    }
+  }
+
+  .feed {
+    @include core-14;
+    display: block;
+    margin-bottom: $gutter;
+    span {
+      padding-right: $gutter-one-third / 2;
+    }
+    a {
+      background: image-url('feed-icon-black.png') 0 40% no-repeat;
+      font-weight: bold;
+      padding: 0 $gutter-one-third 0 $gutter-half;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .document {
+    border-bottom: solid 1px $border-colour;
+    padding: $gutter-half 0;
+
+    &:first-child {
+      padding-top:0;
+      margin-top:-2px;
+    }
+
+    h3 {
+      @include bold-19;
+      margin: 0;
+
+      a {
+        text-decoration:none;
+      }
+    }
+
+    dl {
+      margin: 0;
+
+      dt, dd {
+        @include core-14;
+        margin-left: 0;
+      }
+
+      dt {
+        display: none;
+
+        &.metadata-date-label {
+          @include inline-block;
+        }
+      }
+
+      dd {
+        margin-right: $gutter-one-third;
+        @include inline-block;
+      }
+    }
+
+    p.historic {
+      @include core-14;
+      padding: 0 0 3px;
+      color: $secondary-text-colour;
+    }
+  }
 }

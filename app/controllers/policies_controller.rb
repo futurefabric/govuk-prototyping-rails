@@ -9,6 +9,9 @@ class PoliciesController < ApplicationController
 
 
   # Policy areas
+  def policy_area
+    @title = "Policy area"
+  end
 
   def benefits_reform
     @title = "Benefits reform"
