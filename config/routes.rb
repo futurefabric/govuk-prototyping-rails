@@ -11,6 +11,9 @@ GovukPrototypingRails::Application.routes.draw do
   get "policies/policy-area" => 'policies#policy_area'
   get "policies/progressively-disclose" => 'policies#policy_area'
 
+  get "policies/markdown"
+  get "policies/markdown" => 'policies#markdown'
+
   # content tests
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'

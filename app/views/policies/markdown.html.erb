@@ -1,0 +1,1185 @@
+
+<!-- POLICY AREA -->
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<%= render partial: 'govuk_component/title', locals: { context: 'Policy', title: @title } %>
+		<%= render partial: 'govuk_component/metadata', locals: {
+		  :from => [
+				"<a href='#'>Department for Education</a>",
+				"<a href='#'>Minister name</a>"
+			]
+		} %>
+
+		<div class="summary">
+    	<div class="govuk-govspeak">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo consequat luctus. Etiam ut bibendum velit. Ut enim sem, consequat in lorem et, ultrices dapibus tortor. Phasellus ullamcorper suscipit purus vel volutpat.</p>
+				<a href='#' class='view-all'>See featured documents</a>
+				<!-- <div class="js-undisclosed filtered-results">
+
+					<ul>
+					    <li class="document">
+					      <h3><a href="/government/publications/sheffield-devolution-agreement">Sheffield devolution agreement</a></h3>
+					      <dl>
+					            <dt class="metadata-text-label">From:</dt>
+					            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+					            <dt class="metadata-text-label">Type:</dt>
+					            <dd class="metadata-text-value">Policy paper</dd>
+
+
+					            <dt class="metadata-date-label">Updated:</dt>
+					            <dd class="metadata-date-value"><time datetime="2015-02-11">11 February 2015</time></dd>
+					      </dl>
+					    </li>
+
+							<li class="document">
+					      <h3><a href="/government/publications/sheffield-devolution-agreement">Sheffield devolution agreement</a></h3>
+					      <dl>
+					            <dt class="metadata-text-label">From:</dt>
+					            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+					            <dt class="metadata-text-label">Type:</dt>
+					            <dd class="metadata-text-value">Policy paper</dd>
+
+
+					            <dt class="metadata-date-label">Updated:</dt>
+					            <dd class="metadata-date-value"><time datetime="2015-02-11">11 February 2015</time></dd>
+					      </dl>
+					    </li>
+
+							<li class="document">
+					      <h3><a href="/government/publications/sheffield-devolution-agreement">Sheffield devolution agreement</a></h3>
+					      <dl>
+					            <dt class="metadata-text-label">From:</dt>
+					            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+					            <dt class="metadata-text-label">Type:</dt>
+					            <dd class="metadata-text-value">Policy paper</dd>
+
+
+					            <dt class="metadata-date-label">Updated:</dt>
+					            <dd class="metadata-date-value"><time datetime="2015-02-11">11 February 2015</time></dd>
+					      </dl>
+					    </li>
+					</ul>
+
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="column-third">
+		<ul class="related_programmes">
+			<li><a href="<%= root_url %>">Working age benefits</a></li>
+			<li><a href="<%= root_url %>">Housing Benefit payment</a></li>
+			<li><a href="<%= root_url %>">Work Capability Assessment</a></li>
+			<li><a href="<%= root_url %>">Jobseeker’s Allowance Claimant Commitment</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="grid-row">
+	<div class="full-width">
+
+		<hr>
+		<div class="filtering">
+  <div class="filter-form">
+  <div class="inner-block">
+    <form method="get" action="/government/policies/city-deals-and-growth-deals" class="js-live-search-form">
+      <div class="filter text-filter">
+        <label class="legend" for="finder-keyword-search">Search</label>
+        <input value="" type="text" name="keywords" id="finder-keyword-search" aria-controls="js-search-results-info" class="text">
+      </div>
+      <div class="filter text-filter">
+  <label class="legend" for="public_timestamp[from]">Published after</label>
+  <input value="" type="text" name="public_timestamp[from]" id="public_timestamp[from]" aria-controls="js-search-results-info" aria-describedby="date-help-text" class="text">
+
+  <label class="legend" for="public_timestamp[to]">Published before</label>
+  <input value="" type="text" name="public_timestamp[to]" id="public_timestamp[to]" aria-controls="js-search-results-info" class="text" aria-describedby="date-help-text">
+  <span id="date-help-text" class="help-text">For example, 2005 or 21/11/2014<span>
+</span></span>
+</div>
+
+      <input type="submit" value="Filter results" class="button js-live-search-fallback">
+    </form>
+  </div>
+</div>
+
+  <div class="js-live-search-results-block">
+    <div class="filtered-results">
+      <div aria-live="assertive" id="js-search-results-info">
+
+      </div>
+      <div id="js-results">
+        <div class="feed">
+  <span>Get updates to this list</span>
+  <a href="/government/policies/city-deals-and-growth-deals.atom">feed</a>
+</div>
+
+<ul>
+    <li class="document">
+      <h3><a href="/government/publications/sheffield-devolution-agreement">Sheffield devolution agreement</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2015-02-11">11 February 2015</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/oyster-style-cards-for-sheffield-as-deputy-pm-agrees-devolution-deal">'Oyster-style' cards for Sheffield as Deputy PM agrees devolution deal</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-12-12">12 December 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/landmark-12-billion-glasgow-and-clyde-valley-city-deal-signed">Landmark £1.2 billion Glasgow and Clyde Valley City Deal signed</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-20">20 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-glasgow-and-clyde-valley">City Deal: Glasgow and Clyde Valley</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-08-20">20 August 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-swindon-and-wiltshire">City Deal: Swindon and Wiltshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-07">7 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/once-in-a-generation-investment-in-glasgow-and-clyde-valley">Once in a generation investment in Glasgow and Clyde Valley</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-04">4 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/glasgow-city-deal-article-by-david-cameron-and-danny-alexander">Glasgow City Deal: article by David Cameron and Danny Alexander</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">HM Treasury and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-07-04">4 July 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/greater-cambridge-city-deal-signed">Greater Cambridge City Deal signed</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-20">20 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deals-greater-cambridge">City Deals: Greater Cambridge</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-20">20 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-tees-valley">City Deal: Tees Valley</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-19">19 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-sunderland-and-south-tyneside">City Deal: Sunderland and South Tyneside</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-06-19">19 June 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/1-billion-boost-for-cambridgeshire">£1 billion boost for Cambridgeshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-04-03">3 April 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-leicester-and-leicestershire">City Deal: Leicester and Leicestershire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-24">24 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-creates-thousands-of-new-jobs-and-apprenticeships-in-leicestershire">City Deal creates thousands of new jobs and apprenticeships in Leicestershire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-24">24 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-marks-new-era-of-prosperity-for-sunderland">City Deal marks new era of prosperity for Sunderland</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-14">14 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-to-bring-uks-first-ever-large-scale-low-carbon-heat-network-system-to-stoke-on-trent">City Deal to bring UK’s first ever large-scale, low-carbon heat network system to Stoke-on-Trent</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-13">13 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-stoke-on-trent-and-staffordshire">City Deal: Stoke-on-Trent and Staffordshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-13">13 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-greater-brighton">City Deal: Greater Brighton</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-12">12 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-southend-on-sea">City Deal: Southend-on-Sea</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-12">12 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/brighton-city-deal-to-help-create-silicon-beach">Brighton City Deal to help create "Silicon Beach"</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-11">11 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-to-transform-southend-on-sea-into-major-business-centre">City Deal to transform Southend-on-Sea into major business centre</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-03-10">10 March 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-black-country">City Deal: Black Country</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-02-04">4 February 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-oxford-and-oxfordshire">City Deal: Oxford and Oxfordshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-30">30 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-signed-to-create-thouands-of-jobs-in-oxford-and-surrounding-area">City Deal signed to create thousands of jobs in Oxford and surrounding area</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-30">30 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/lords-heseltine-and-shipley-appointed-to-negotiate-local-growth-deals">Lords Heseltine and Shipley appointed to negotiate Local Growth Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-21">21 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/plymouth-and-south-west-peninsula-city-deal-to-boost-jobs-and-growth">Plymouth and South West Peninsula City Deal to boost jobs and growth</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-17">17 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-plymouth-and-the-south-west-peninsula">City Deal: Plymouth and the South West Peninsula</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2014-01-17">17 January 2014</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/speeches/pm-direct-in-stockton-on-tees">PM Direct in Stockton-on-Tees</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Speech</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-13">13 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-hull-humber">City Deal: Hull &amp; Humber</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-13">13 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/hull-and-humber-city-deal-to-accelerate-regions-recovery">Hull and Humber City Deal to accelerate region's recovery</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-13">13 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/tees-valley-city-deal-to-boost-local-growth">Tees Valley City Deal to boost local growth</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-13">13 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-greater-norwich">City Deal: Greater Norwich</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-12">12 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deals-for-coventry-norwich-the-black-country-and-cambridge">City Deals for Coventry, Norwich, the Black Country and Cambridge</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-12">12 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-coventry-and-warwickshire">City Deal: Coventry and Warwickshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-12-12">12 December 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-announces-multimillion-pound-boost-for-youth-jobs">Deputy Prime Minister announces multimillion pound boost for youth jobs</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-11-14">14 November 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-southampton-and-portsmouth">City Deal: Southampton and Portsmouth</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-11-12">12 November 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/950-million-city-deal-to-create-thousands-of-new-jobs-in-southampton-and-portsmouth">£950 million City Deal to create thousands of new jobs in Southampton and Portsmouth</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-11-12">12 November 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/greater-ipswich-city-deal-signed">Greater Ipswich City Deal signed</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-30">30 October 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-greater-ipswich">City Deal: Greater Ipswich</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-30">30 October 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deal-to-unlock-young-peoples-potential-in-thames-valley-berkshire">City deal to unlock young people's potential in Thames Valley Berkshire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-10-28">28 October 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/preston-city-deal-to-build-new-roads-and-create-thousands-of-jobs-and-homes">Preston City Deal to build new roads and create thousands of jobs and homes</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">HM Treasury and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-12">12 September 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-preston-south-ribble-and-lancashire">City Deal: Preston, South Ribble and Lancashire</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">HM Treasury and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-12">12 September 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/policies/giving-more-power-back-to-cities-through-city-deals/supporting-pages/city-deals">City Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Supporting page</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-12">12 September 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/policies/giving-more-power-back-to-cities-through-city-deals/supporting-pages/city-deals-wave-1">City Deals – wave 1</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Supporting page</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-12">12 September 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/policies/giving-more-power-back-to-cities-through-city-deals/supporting-pages/city-deals-wave-2">City Deals - wave 2</a></h3>
+      <dl>
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Supporting page</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-09-12">12 September 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/cities-youth-employment-boost">Cities youth employment boost</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-07-30">30 July 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/collections/city-deals">City Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Collection</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-07-05">5 July 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-meets-city-leaders-to-discuss-city-deals">Deputy Prime Minister meets city leaders to discuss City Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-28">28 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-announces-north-east-jobs-boost">Deputy Prime Minister announces north east jobs boost</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-14">14 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/speeches/deputy-prime-ministers-speech-at-event-marking-100-years-of-stainless-steel">Deputy Prime Minister's speech at event marking 100 years of stainless steel</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Speech</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-12">12 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-to-announce-new-local-growth-committee">Deputy Prime Minister announces new Local Growth Committee</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-06-12">12 June 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/2010-to-2015-government-policy-city-deals-and-growth-deals">2010 to 2015 government policy: City Deals and Growth Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-04-29">29 April 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-launches-more-city-deals">Deputy Prime Minister launches more 'City Deals'</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-02-19">19 February 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/speeches/deputy-prime-ministers-speech-on-economic-decentralisation-at-mansion-house">Deputy Prime Minister’s speech on economic decentralisation at Mansion House</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Speech</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-02-18">18 February 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/press-briefing-morning-11-february-2013">Press briefing - morning 11 February 2013</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Prime Minister's Office, 10 Downing Street</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2013-02-11">11 February 2013</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/jobs-boost-for-leicester-and-nottingham">Jobs boost for Leicester and Nottingham</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-12-06">6 December 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/government-formalises-the-first-wave-of-city-deals">Government formalises the first wave of City Deals</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-09-18">18 September 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deals-wave-1">City Deals: Wave 1</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/unlocking-growth-in-cities-city-deals-wave-1">Unlocking growth in cities: city deals wave 1</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Department for Communities and Local Government and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/city-deals-announced-to-allow-cities-to-go-for-growth">City deals announced to allow cities to go for growth</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">News story</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-bristol">City Deal: Bristol</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-leeds">City Deal: Leeds</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-nottingham">City Deal: Nottingham</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-sheffield">City Deal: Sheffield</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-liverpool">City Deal: Liverpool</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-greater-birmingham">City Deal: Greater Birmingham</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-greater-manchester">City Deal: Greater Manchester</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/city-deal-newcastle">City Deal: Newcastle</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-07-05">5 July 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/state-of-the-estate-in-2011">State of the estate in 2011</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Corporate report</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2012-05-23">23 May 2012</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/speeches/do-it-your-way-deputy-prime-minister-launches-new-city-deals-speech-transcript">Do it your way – Deputy Prime Minister launches new ‘city deals’: speech transcript</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office and 1 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Speech</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-12-08">8 December 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/unlocking-growth-in-cities--5">Unlocking growth in cities</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Department for Communities and Local Government and 2 others</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-12-08">8 December 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/government-renews-focus-on-cities--2">Government renews focus on cities</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-07-19">19 July 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/publications/updating-the-evidence-base-on-english-cities">Updating the evidence base on English cities</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Department for Communities and Local Government</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Policy paper</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-01-31">31 January 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/deputy-prime-minister-calls-on-englands-cities-to-help-rebalance-the-economy">Deputy Prime Minister calls on England’s cities to help rebalance the economy</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2011-01-14">14 January 2011</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/a-new-decentralised-britain">A new decentralised Britain</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Deputy Prime Minister's Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2010-12-13">13 December 2010</time></dd>
+      </dl>
+    </li>
+    <li class="document">
+      <h3><a href="/government/news/regional-growth-fund-opens-for-business">Regional Growth Fund opens for business</a></h3>
+      <dl>
+            <dt class="metadata-text-label">From:</dt>
+            <dd class="metadata-text-value">Cabinet Office</dd>
+
+            <dt class="metadata-text-label">Type:</dt>
+            <dd class="metadata-text-value">Press release</dd>
+
+
+            <dt class="metadata-date-label">Updated:</dt>
+            <dd class="metadata-date-value"><time datetime="2010-10-28">28 October 2010</time></dd>
+      </dl>
+    </li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	</div>
+</div>

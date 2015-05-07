@@ -13,6 +13,10 @@ class PoliciesController < ApplicationController
     @title = "Policy area"
   end
 
+  def markdown
+    @title = "Policy area"
+  end
+
   def benefits_reform
     @title = "Benefits reform"
   end
