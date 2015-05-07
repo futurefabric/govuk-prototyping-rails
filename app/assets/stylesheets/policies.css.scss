@@ -82,6 +82,11 @@
   }
 }
 
+.feature_me {
+  p {
+    @include core-16;
+  }
+}
 
 a.view-all {
   border-radius: 3px;
