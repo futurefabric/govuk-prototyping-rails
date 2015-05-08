@@ -130,6 +130,10 @@ a.view-all {
       content: " \25BC";
     }
   }
+
+  .filtered-results {
+
+  }
 }
 
 .js-undisclosed {
@@ -409,7 +413,8 @@ input.text {
 
   .document {
     border-bottom: solid 1px $border-colour;
-    padding:$gutter/2;
+
+    padding:$gutter/2 0;
 
     &:first-child {
       padding-top:0;
@@ -454,7 +459,9 @@ input.text {
     }
   }
 
-  .highlighted {
+  .document.highlighted {
+
+    padding:$gutter/2;
 
     &:first-child {
       border-top: solid 1px $border-colour;
