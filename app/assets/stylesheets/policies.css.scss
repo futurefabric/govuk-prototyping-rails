@@ -462,16 +462,17 @@ input.text {
   .document.highlighted {
 
     padding:$gutter/2;
+    margin-left:-$gutter/2;
 
     &:first-child {
-      border-top: solid 1px $border-colour;
-      //border-top:none;
+      //border-top: solid 1px $border-colour;
+      border-top:none;
       padding-top:$gutter/2;
     }
 
-    //background: $grey-4;
-    //border:none;
+    background: $grey-4;
     border: solid 1px $border-colour;
+    border:none;
     margin-bottom:$gutter/2;
   }
 }
