@@ -14,6 +14,9 @@ GovukPrototypingRails::Application.routes.draw do
   get "policies/markdown"
   get "policies/markdown" => 'policies#markdown'
 
+  get "policies/in_resultset"
+  get "policies/in-resultset" => 'policies#in_resultset'
+
   # content tests
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'

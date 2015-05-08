@@ -409,7 +409,7 @@ input.text {
 
   .document {
     border-bottom: solid 1px $border-colour;
-    padding: $gutter-half 0;
+    padding:$gutter/2;
 
     &:first-child {
       padding-top:0;
@@ -452,5 +452,19 @@ input.text {
       padding: 0 0 3px;
       color: $secondary-text-colour;
     }
+  }
+
+  .highlighted {
+
+    &:first-child {
+      border-top: solid 1px $border-colour;
+      //border-top:none;
+      padding-top:$gutter/2;
+    }
+
+    //background: $grey-4;
+    //border:none;
+    border: solid 1px $border-colour;
+    margin-bottom:$gutter/2;
   }
 }

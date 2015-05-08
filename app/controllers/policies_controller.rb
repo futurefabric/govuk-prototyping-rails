@@ -17,6 +17,10 @@ class PoliciesController < ApplicationController
     @title = "Policy area"
   end
 
+  def in_resultset
+    @title = "Policy area"
+  end
+
   def benefits_reform
     @title = "Benefits reform"
   end
