@@ -14,15 +14,15 @@ class PoliciesController < ApplicationController
   end
 
   def progressive
-    @title = "Policy area"
+    @title = "Special educational needs and disability (SEND)"
   end
 
   def markdown
-    @title = "Policy area"
+    @title = "Special educational needs and disability (SEND)"
   end
 
   def in_resultset
-    @title = "Policy area"
+    @title = "Special educational needs and disability (SEND)"
   end
 
   def benefits_reform
