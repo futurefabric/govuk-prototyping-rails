@@ -9,7 +9,10 @@ GovukPrototypingRails::Application.routes.draw do
   # progressively disclosed featured docs
   get "policies/policy_area"
   get "policies/policy-area" => 'policies#policy_area'
-  get "policies/progressively-disclose" => 'policies#policy_area'
+  #get "policies/progressively-disclose" => 'policies#policy_area'
+
+  get "policies/progressive"
+  get "policies/progressively-disclose" => 'policies#progressive'
 
   get "policies/markdown"
   get "policies/markdown" => 'policies#markdown'

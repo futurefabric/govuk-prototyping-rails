@@ -20,6 +20,6 @@ module GovukPrototypingRails
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.slimmer.asset_host = 'https://assets-origin.preview.alphagov.co.uk'
+    config.slimmer.asset_host = 'https://assets.digital.cabinet-office.gov.uk'
   end
 end

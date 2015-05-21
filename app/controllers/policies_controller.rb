@@ -13,6 +13,10 @@ class PoliciesController < ApplicationController
     @title = "Policy area"
   end
 
+  def progressive
+    @title = "Policy area"
+  end
+
   def markdown
     @title = "Policy area"
   end
