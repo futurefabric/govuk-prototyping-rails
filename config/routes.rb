@@ -20,6 +20,11 @@ GovukPrototypingRails::Application.routes.draw do
   get "policies/in_resultset"
   get "policies/in-resultset" => 'policies#in_resultset'
 
+  get "policies/rhs_links"
+  get "policies/rhs-links" => 'policies#rhs_links'
+
+
+
   # content tests
   get "policies/benefits_reform"
   get "policies/benefits-reform" => 'policies#benefits_reform'

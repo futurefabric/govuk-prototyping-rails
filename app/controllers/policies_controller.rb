@@ -9,6 +9,10 @@ class PoliciesController < ApplicationController
 
 
   # Policy areas
+  def rhs_links
+    @title = "Special educational needs and disability (SEND)"
+  end
+
   def policy_area
     @title = "Policy area"
   end

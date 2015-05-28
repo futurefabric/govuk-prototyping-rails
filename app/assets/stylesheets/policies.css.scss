@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+li.featured-doc  {
+  margin-top: 25px !important;
+}
 
 .related_programmes,
 .policies_list {
@@ -26,7 +29,6 @@
 .related_programmes {
 
   @include media(desktop) {
-    margin-top:190px;
   }
 }
 
